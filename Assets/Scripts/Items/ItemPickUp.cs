@@ -11,7 +11,8 @@ public class ItemPickUp : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		if (other != null && other.tag == "Player") {
-			if (PlayerStats.addVodka()) Destroy(this.gameObject);
+			PlayerStats.addAlcohol(1.0f);
+			Destroy(this.gameObject);
 		}
 	}
 }

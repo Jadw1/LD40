@@ -1,31 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class PlayerStats {
-	// Default constant values
-	private const float defaultHealth = 100.0f;
-	private const float defaultArmor = 0.0f;
-
+﻿public static class PlayerStats {
 	// Max values
 	private const float maxHealth = 100.0f;
 	private const float maxArmor = 100.0f;
 
-	private const int maxStoredVodka = 2;
+	// Default constant values
+	private const float defaultHealth = maxHealth;
+	private const float defaultArmor = 0.0f;
+	private const float defaultAlcohol = 0.0f;
 
 	// Current stats
 	private static float currentHealth = defaultHealth;
 	private static float currentArmor = defaultArmor;
-
-	private static int storedVodka = 0;
+	private static float currentAlcohol = defaultAlcohol;
 
 	// Value functions (we don't need setters for everything)
-	public static void dealDamage(float damage) {
-		float dmg = damage * (1 - (currentArmor / maxArmor));
+	public static void dealDamage(float damage, bool direct = false) {
+		float dmg = damage;
 
-		currentArmor -= damage;
+		if (!direct) {
+			dmg = damage * (1 - (currentArmor / maxArmor));
 
-		if (currentArmor < 0.0f) currentArmor = 0.0f;
+			currentArmor -= damage;
+
+			if (currentArmor < 0.0f) currentArmor = 0.0f;
+		}
 
 		currentHealth -= dmg;
 
@@ -49,23 +47,22 @@ public static class PlayerStats {
 		if (currentArmor < 0.0f) currentArmor = 0.0f;
 	}
 
-	public static bool addVodka() {
-		if (storedVodka < maxStoredVodka) {
-			storedVodka++;
-			return true;
-		}
-
-		return false;
+	public static void addAlcohol(float amount) {
+		currentAlcohol += amount;
 	}
 
-	public static bool removeVodka() {
-		if (storedVodka > 0) {
-			storedVodka--;
-			return true;
-		}
-
-		return false;
+	public static void removeAlcohol(float amount) {
+		currentAlcohol -= amount;
+		if (currentAlcohol < 0.0f) currentAlcohol = 0.0f;
 	}
 
-	public static float getHealthPercent() { return (currentHealth / maxHealth) * 100.0f; }
+	public static float getAlcohol() { return currentAlcohol; }
+
+	public static void reset() {
+		currentArmor = defaultArmor;
+		currentHealth = defaultHealth;
+		currentAlcohol = defaultAlcohol;
+	}
+
+	public static float getHealthPercent() { return (currentHealth / maxHealth); }
 }
