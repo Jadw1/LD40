@@ -279,8 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f972ca9c4e721bc4c990a7ef84e36846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 40
   range: 50
   fireRate: 10
+  bulletHole: {fileID: 1906015260140540, guid: df5081d9470b6784c963595f8f1e27ec, type: 2}
+  ignore:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114938890650362956
 MonoBehaviour:
   m_ObjectHideFlags: 1

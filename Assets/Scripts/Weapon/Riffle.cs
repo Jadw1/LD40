@@ -13,12 +13,27 @@ public class Riffle : MonoBehaviour {
     public GameObject bulletHole;
     public LayerMask ignore;
 
-    private void FixedUpdate() {
+	public AudioClip soundShoot;
+	public AudioClip soundReload;
+
+	private AudioSource audio;
+
+	private void Start() {
+		audio = GetComponent<AudioSource>();
+
+		audio.clip = soundShoot;
+	}
+
+	private void FixedUpdate() {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0.0f));
         RaycastHit hit;
         if(Input.GetButton("Fire1") && Time.time > timeToFire) {
             timeToFire = Time.time + 1 / fireRate;
 
+			// Sound
+			audio.PlayOneShot(soundShoot);
+
+			// Hit logic
             if(Physics.Raycast(ray, out hit, range, ~ignore)) {
                 if (hit.collider.tag == "Enemy") {
                     EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();

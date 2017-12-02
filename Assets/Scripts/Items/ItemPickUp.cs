@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour {
+
+	private float startingY = 0.0f;
+	private float offset = 0.0f;
+
 	public enum Type {
 		ALCOHOL,
 		HEAL,
@@ -12,6 +16,9 @@ public class ItemPickUp : MonoBehaviour {
 	};
 
 	public float strength = 1.0f;
+
+	public float bobSpeed = 3.0f;
+	public float bobRange = 0.25f;
 
 	public Type itemType;
 
@@ -42,5 +49,17 @@ public class ItemPickUp : MonoBehaviour {
 				default: break;
 			}
 		}
+	}
+
+	private void Start() {
+		startingY = transform.position.y;
+	}
+
+	private void FixedUpdate() {
+		offset += Time.fixedDeltaTime * bobSpeed;
+
+		if (offset > Mathf.PI * 2) offset -= Mathf.PI * 2;
+
+		transform.position = new Vector3(transform.position.x, startingY + Mathf.Sin(offset) * bobRange, transform.position.z);
 	}
 }
