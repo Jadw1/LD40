@@ -27,7 +27,7 @@ public class Riffle : MonoBehaviour {
 	private void FixedUpdate() {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0.0f));
         RaycastHit hit;
-        if(Input.GetButton("Fire1") && Time.time >= timeToFire) {
+        if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0) {
             timeToFire = Time.time + 1 / fireRate;
 
 			// Sound
@@ -38,7 +38,7 @@ public class Riffle : MonoBehaviour {
                 if (hit.collider.tag == "Enemy") {
                     EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();
                     if (enemy != null) {
-                        enemy.dealDamage(damage);
+                        enemy.dealDamage(PlayerStats.damage);
                     }
                     else {
                         Debug.LogError("Cant find enemy!!!");
@@ -48,6 +48,19 @@ public class Riffle : MonoBehaviour {
                     Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
                 }
             }
+
+            PlayerStats.RemoveOneBullet();
         }
+    }
+
+    private void Update() {
+        if(Input.GetButtonDown("Reload") && PlayerStats.IsReloadingPossible()) {
+            Reload();
+        }
+    }
+
+    private void Reload() {
+        audio.PlayOneShot(soundReload);
+        PlayerStats.Reload();
     }
 }

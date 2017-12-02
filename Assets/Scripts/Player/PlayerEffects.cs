@@ -25,7 +25,7 @@ public class PlayerEffects : MonoBehaviour {
 
 	private void Update() {
 		// Alcohol effects
-		float alcohol = PlayerStats.getAlcohol() - 5.0f;
+		float alcohol = PlayerStats.alcohol - 5.0f;
 
 		if (alcohol < 0.0f) alcohol = 0.0f;
 		if (alcohol > 20.0f) alcohol = 20.0f;

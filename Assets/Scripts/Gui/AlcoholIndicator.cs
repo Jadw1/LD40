@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class AlcoholIndicator : MonoBehaviour {
@@ -14,6 +12,6 @@ public class AlcoholIndicator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Alcohol: " + PlayerStats.getAlcohol().ToString("0.0") + " ‰";
+		text.text = "Alcohol: " + PlayerStats.alcohol.ToString("0.0") + " ‰";
 	}
 }

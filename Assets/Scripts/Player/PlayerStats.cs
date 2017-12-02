@@ -1,4 +1,6 @@
-﻿public static class PlayerStats {
+﻿using UnityEngine;
+
+public static class PlayerStats {
 	// Max values
 	private const float maxHealth = 100.0f;
 	private const float maxArmor = 100.0f;
@@ -7,16 +9,73 @@
 	private const float defaultHealth = maxHealth;
 	private const float defaultArmor = 0.0f;
 	private const float defaultAlcohol = 0.0f;
+    private const float defaultDamage = 30.0f;
+    private const int defaultMaxAmmo = 150;
+    private const int defaultMaxClip = 20;
 
 	// Current stats
 	private static float currentHealth = defaultHealth;
 	private static float currentArmor = defaultArmor;
 	private static float currentAlcohol = defaultAlcohol;
+    private static int currentAmmo = defaultMaxAmmo;
+    private static int currentClip = defaultMaxClip;
+
+    // Modifiers
+    public static float damageModifier = 1.0f;
 
 	// Player effects object for sound effects
 	private static PlayerEffects player;
 
+    // Getters
+    public static float damage {
+        get { return defaultDamage * damageModifier; }
+    }
+    public static int clip {
+        get { return currentClip; }
+    }
+    public static int ammo {
+        get { return currentAmmo; }
+    }
+	public static float alcohol {
+        get { return currentAlcohol; }
+    }
+
 	// Value functions (we don't need setters for everything)
+    public static void RemoveOneBullet() {  // xdddddddd
+        currentClip = Mathf.Clamp(currentClip - 1, 0, defaultMaxClip);
+    }
+
+    public static bool IsReloadingPossible() {
+        if (currentClip == defaultMaxClip || currentAmmo <= 0)
+            return false;
+        else
+            return true;
+    }
+
+    public static bool IsAmmoFull() {
+        if (currentAmmo == defaultMaxAmmo)
+            return true;
+        else
+            return false;
+    }
+
+    public static void AddAmmo(int amount) {
+        currentAmmo = Mathf.Clamp(currentAmmo + amount, 0, defaultMaxAmmo);
+    }
+
+    public static void Reload() {
+        if(currentAmmo >= defaultMaxClip) {
+            int difference = defaultMaxClip - currentClip;
+            currentClip = defaultMaxClip;
+            currentAmmo -= difference;
+        }
+        else {
+            int difference = defaultMaxClip - currentClip;
+            currentClip = currentAmmo;
+            currentAmmo -= difference;
+        }
+    }
+
 	public static void dealDamage(float damage, bool direct = false) {
 		float dmg = damage;
 
@@ -61,7 +120,6 @@
 		if (currentAlcohol < 0.0f) currentAlcohol = 0.0f;
 	}
 
-	public static float getAlcohol() { return currentAlcohol; }
 
 	public static void reset() {
 		currentArmor = defaultArmor;

@@ -219,17 +219,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114677753260029496, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
-        type: 2}
-      propertyPath: bulletHole
-      value: 
-      objectReference: {fileID: 1906015260140540, guid: df5081d9470b6784c963595f8f1e27ec,
-        type: 2}
-    - target: {fileID: 114677753260029496, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
-        type: 2}
-      propertyPath: ignore.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5a035418ae5fe4a8f25027cb7f6fb8, type: 2}
   m_IsPrefabParent: 0
@@ -816,9 +805,10 @@ GameObject:
   - component: {fileID: 2122546962}
   - component: {fileID: 2122546961}
   - component: {fileID: 2122546964}
+  - component: {fileID: 2122546965}
   m_Layer: 0
   m_Name: EnemyPlaceHolder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,3 +893,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2122546965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2122546960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultArmor: 50
+  currentHealth: 100
