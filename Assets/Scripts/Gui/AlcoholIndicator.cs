@@ -14,6 +14,6 @@ public class AlcoholIndicator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Alcohol: " + PlayerStats.getAlcohol().ToString() + " ‰";
+		text.text = "Alcohol: " + PlayerStats.getAlcohol().ToString("0.0") + " ‰";
 	}
 }
