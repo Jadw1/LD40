@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135573535285891814}
   - component: {fileID: 114538217296800590}
   - component: {fileID: 114826275824763306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vodka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
