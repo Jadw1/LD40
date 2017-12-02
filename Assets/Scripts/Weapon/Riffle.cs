@@ -27,7 +27,7 @@ public class Riffle : MonoBehaviour {
 	private void FixedUpdate() {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0.0f));
         RaycastHit hit;
-        if(Input.GetButton("Fire1") && Time.time > timeToFire) {
+        if(Input.GetButton("Fire1") && Time.time >= timeToFire) {
             timeToFire = Time.time + 1 / fireRate;
 
 			// Sound
