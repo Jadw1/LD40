@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4729713401410338}
   - component: {fileID: 143541301362655782}
   - component: {fileID: 114040048410167476}
+  - component: {fileID: 114571310350421086}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -74,6 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4062844203791424}
   - component: {fileID: 20851748604919558}
+  - component: {fileID: 114938890650362956}
   m_Layer: 0
   m_Name: Weapon Camera
   m_TagString: Untagged
@@ -253,6 +255,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
   BlockCount: 512
+--- !u!114 &114571310350421086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763807895419724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652eb4b52f807e5478b705c0670e01ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 114297873043704770}
+  weaponCamera: {fileID: 114938890650362956}
 --- !u!114 &114677753260029496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +281,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 50
   fireRate: 10
+--- !u!114 &114938890650362956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995377166663038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cd8dcae69d178488f5efa28e7c7e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
+  BlockCount: 512
 --- !u!124 &124235196393524970
 Behaviour:
   m_ObjectHideFlags: 1

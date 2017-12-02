@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 224939086972480164}
   - component: {fileID: 222099404478327888}
   - component: {fileID: 114575033281856864}
+  - component: {fileID: 114342836466556060}
   m_Layer: 5
   m_Name: Alcohol Indicator
   m_TagString: Untagged
@@ -245,6 +246,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114342836466556060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337565186377430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fe762d681cca843babce428c7e697a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114522413159007192
 MonoBehaviour:
   m_ObjectHideFlags: 1
