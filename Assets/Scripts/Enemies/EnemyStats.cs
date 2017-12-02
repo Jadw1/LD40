@@ -11,7 +11,7 @@ public class EnemyStats : MonoBehaviour {
 	public float defaultArmor = 50.0f;
 
 	// Current stats
-	private float currentHealth = maxHealth;
+	public float currentHealth = maxHealth;
 	private float currentArmor = 0.0f;
 
 	private void Start() {
@@ -31,8 +31,14 @@ public class EnemyStats : MonoBehaviour {
 
 		currentHealth -= dmg;
 
-		if (currentHealth < 0.0f) currentHealth = 0.0f;
+        if (currentHealth < 0.0f) {
+            KillMe();
+        }
 	}
+
+    private void KillMe() {
+        Destroy(gameObject);
+    }
 
 	public float getHealthPercent() { return currentHealth / maxHealth; }
 }

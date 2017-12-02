@@ -20,10 +20,18 @@ public class Riffle : MonoBehaviour {
             timeToFire = Time.time + 1 / fireRate;
 
             if(Physics.Raycast(ray, out hit, range, ~ignore)) {
-                if(hit.collider.tag == "Enemy") {
-
+                if (hit.collider.tag == "Enemy") {
+                    EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();
+                    if (enemy != null) {
+                        enemy.dealDamage(damage);
+                    }
+                    else {
+                        Debug.LogError("Cant find enemy!!!");
+                    }
                 }
-                Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                else {
+                    Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                }
             }
         }
     }
