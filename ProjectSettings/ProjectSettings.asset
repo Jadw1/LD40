@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: 55595991ca4d3df468583557fd27ccd9
+  productGUID: f82bda0e8eb4e324b8a701ba12819007
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -603,8 +603,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 8afc9e6f-a00d-4057-af3e-a4b3acaa95ae
-  projectName: LD40
+  cloudProjectId: c5383e1a-0798-4b6a-830a-6801f25ae10b
+  projectName: LD40 (1)
   organizationId: jadw1
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
