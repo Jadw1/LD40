@@ -21,7 +21,7 @@ public class ItemPickUp : MonoBehaviour {
 				case Type.ALCOHOL:
 					PlayerStats.addAlcohol(strength);
 					Destroy(this.gameObject);
-					break;
+					return;
 				case Type.HEAL:
 					PlayerStats.heal(strength);
 					Destroy(this.gameObject);

@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 507ef9ab2067bd94d94cde989c02d013
-timeCreated: 1512217865
+guid: a6bf33255d490c24c8bd829accb3eb3d
+timeCreated: 1512224200
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: weapon01
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -41,13 +40,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -77,21 +76,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: weapon01
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 911
-        width: 102
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
