@@ -13,6 +13,9 @@
 	private static float currentArmor = defaultArmor;
 	private static float currentAlcohol = defaultAlcohol;
 
+	// Player effects object for sound effects
+	private static PlayerEffects player;
+
 	// Value functions (we don't need setters for everything)
 	public static void dealDamage(float damage, bool direct = false) {
 		float dmg = damage;
@@ -49,6 +52,8 @@
 
 	public static void addAlcohol(float amount) {
 		currentAlcohol += amount;
+
+		if (player != null) player.playDrinkingSound();
 	}
 
 	public static void removeAlcohol(float amount) {
@@ -65,4 +70,8 @@
 	}
 
 	public static float getHealthPercent() { return (currentHealth / maxHealth); }
+
+	public static void registerPlayerEffects(PlayerEffects effects) {
+		player = effects;
+	}
 }

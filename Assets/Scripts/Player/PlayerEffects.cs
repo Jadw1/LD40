@@ -7,14 +7,20 @@ public class PlayerEffects : MonoBehaviour {
 	public Pixelation mainCamera;
 	public Pixelation weaponCamera;
 
+	public AudioClip drinkingSound;
+	public AudioSource generalSounds;
+	public AudioSource footsteps;
+
 	private CharacterController character;
-	private AudioSource footsteps;
+	private HeadBobbing headBob;
 
 	private float tick = 0.0f;
 
 	private void Start() {
 		character = GetComponent<CharacterController>();
-		footsteps = GetComponent<AudioSource>();
+		headBob = GetComponentInChildren<HeadBobbing>();
+
+		PlayerStats.registerPlayerEffects(this);
 	}
 
 	private void Update() {
@@ -39,5 +45,9 @@ public class PlayerEffects : MonoBehaviour {
 		// At one point I want to check the type of the ground and if the player is grounded.
 		if (character.velocity.magnitude > 1.0f && !footsteps.isPlaying) footsteps.Play();
 		else if (character.velocity.magnitude < 1.0f && footsteps.isPlaying) footsteps.Stop();
+	}
+
+	public void playDrinkingSound() {
+		generalSounds.PlayOneShot(drinkingSound);
 	}
 }

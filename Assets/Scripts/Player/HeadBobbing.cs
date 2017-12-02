@@ -18,9 +18,12 @@ public class HeadBobbing : MonoBehaviour {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+		float bob = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
+		bob = Mathf.Clamp01(bob);
+
         Vector3 cSharpConversion = transform.localPosition;
 
-        if (Mathf.Abs(horizontal) == 0 && Mathf.Abs(vertical) == 0) {
+        if (bob == 0) {
             timer = 0.0f;
         }
         else {
@@ -32,9 +35,7 @@ public class HeadBobbing : MonoBehaviour {
         }
         if (waveslice != 0) {
             float translateChange = waveslice * bobbingHeight;
-            float totalAxes = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
-            totalAxes = Mathf.Clamp(totalAxes, 0.0f, 1.0f);
-            translateChange = totalAxes * translateChange;
+            translateChange = bob * translateChange;
             cSharpConversion.y = midpoint + translateChange;
         }
         else {
