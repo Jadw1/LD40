@@ -9,14 +9,16 @@ public class Riffle : MonoBehaviour {
 
     private float timeToFire = 0.0f;
 
+    public GameObject bulletHole;
+
     private void FixedUpdate() {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0.0f));
         RaycastHit hit;
         if(Input.GetButton("Fire1") && Time.time > timeToFire) {
             timeToFire = Time.time + 1 / fireRate;
 
             if(Physics.Raycast(ray, out hit, range)) {
-                Debug.Log(hit.collider.name);
+                Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
             }
         }
     }
