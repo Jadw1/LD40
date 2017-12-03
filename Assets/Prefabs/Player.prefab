@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 82598511751144328}
   - component: {fileID: 82637053381395638}
   - component: {fileID: 114534622501022974}
+  - component: {fileID: 114116216358269824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -473,6 +474,18 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 2
   verticalRotationLimit: 45
+--- !u!114 &114116216358269824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763807895419724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4f73dcc0731046b607d2cab89bf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 30
 --- !u!114 &114265772912318964
 MonoBehaviour:
   m_ObjectHideFlags: 1
