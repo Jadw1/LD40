@@ -18,11 +18,19 @@ public class EnemyController : MonoBehaviour {
 
 	public float attackDelay = 1.0f;
 
+    public SpriteRenderer muzzleFlash;
+    private bool isMuzzleOn = false;
+    private float muzzleDelay = 0.5f;
+    private float muzzleTimer = 0.0f;
+
 	private void Start() {
 		character = GetComponent<CharacterController>();
 		stats = GetComponent<EnemyStats>();
 		audio = GetComponent<AudioSource>();
-	}
+
+        DiscardEffect();
+
+    }
 
 	private void Update() {
 
@@ -50,7 +58,12 @@ public class EnemyController : MonoBehaviour {
 						PlayerStats.dealDamage(damage);
 					}
 				}
+
+                Effect();
 			}
+            else if(muzzleTimer >= muzzleDelay) {           
+                DiscardEffect();
+            }
 		}
 		else {
 			direction = Vector3.zero;
@@ -58,9 +71,29 @@ public class EnemyController : MonoBehaviour {
 		}
 
 		character.Move(direction * Time.deltaTime * movementSpeed);
+
+        if(isMuzzleOn) {
+            muzzleTimer += Time.deltaTime;
+        }
 	}
 
-	public bool isWalking() {
+    private void Effect() {
+        muzzleFlash.transform.Rotate(new Vector3(0.0f, 0.0f, Random.Range(-15.0f, 40.0f)));
+        muzzleFlash.transform.localScale = new Vector3(Random.Range(1.75f, 2.25f), Random.Range(1.75f, 2.25f), 1.0f);
+
+        float r = Random.Range(0.8f, 1.0f);
+        muzzleFlash.color = new Color(r, r, r, r);
+
+        muzzleTimer = 0.0f;
+        isMuzzleOn = true;
+    }
+
+    public void DiscardEffect() {
+        muzzleFlash.color = new Color(0, 0, 0, 0);
+        isMuzzleOn = false;
+    }
+
+    public bool isWalking() {
 		return character.velocity.magnitude > 1.0f;
 	}
 }

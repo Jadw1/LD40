@@ -104,7 +104,7 @@ public class Riffle : MonoBehaviour {
 
         muzzleflash.transform.Rotate(new Vector3(0.0f, 0.0f, Random.Range(-15.0f, 40.0f)));
         //muzzleflash.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 90.0f));
-        muzzleflash.transform.localScale = new Vector3(1.0f, 1.0f, Random.Range(0.65f, 1.25f));
+        muzzleflash.transform.localScale = new Vector3(Random.Range(0.65f, 1.25f), Random.Range(0.65f, 1.25f), 1.0f);
 
         float r = Random.Range(0.8f, 1.0f);
         muzzleflash.color = new Color(r, r, r, r);

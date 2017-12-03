@@ -42,6 +42,7 @@ public class EnemyAnim : MonoBehaviour {
 
 		// I make sure to kill the player here
 		if (stats.getHealthPercent() <= 0.0f && !isDieing) {
+            controller.DiscardEffect();
 			currentFrame = 0;
 			isDieing = true;
 		}
