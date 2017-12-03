@@ -17,19 +17,43 @@ public class Riffle : MonoBehaviour {
 	public AudioClip soundShoot;
 	public AudioClip soundReload;
 
+	public SpriteRenderer muzzleflash;
+
 	private AudioSource audio;
 
     private bool fullAmmo = false;
     private int fullAmmoCount = 0;
 
+	private bool isReloading = false;
+	private float reloadTimeLeft = 0.0f;
+
+	private Vector3 gunPos;
+	private float offset = 0.0f;
+
 	private void Start() {
 		audio = GetComponent<AudioSource>();
 
 		audio.clip = soundShoot;
+
+		gunPos = transform.localPosition;
 	}
 
 	private void FixedUpdate() {
 
+		if (isReloading) {
+			offset = Mathf.Lerp(offset, -0.1f, 0.1f);
+			transform.localPosition = gunPos + transform.up * offset;
+
+			reloadTimeLeft -= Time.deltaTime;
+
+			if (reloadTimeLeft <= 0.0f) {
+				reloadTimeLeft = 0.0f;
+				isReloading = false;
+				PlayerStats.Reload();
+			}
+
+			return;
+		}
 
         Ray ray = Camera.main.ScreenPointToRay(GetSpread());
         RaycastHit hit;
@@ -60,12 +84,25 @@ public class Riffle : MonoBehaviour {
             }
 
             PlayerStats.RemoveOneBullet();
+
+			transform.localPosition = gunPos + Random.insideUnitSphere * 0.01f;
+
+			float r = Random.Range(0.8f, 1.0f);
+
+			muzzleflash.color = new Color(r, r, r, r);
+
+			return;
         }
         else if(!Input.GetButton("Fire1") && PlayerStats.clip > 0) {
             fullAmmo = false;
             fullAmmoCount = 0;
         }
-    }
+
+		offset = Mathf.Lerp(offset, 0.0f, 0.1f);
+		transform.localPosition = gunPos + transform.up * offset;
+
+		muzzleflash.color = new Color(0, 0, 0, 0);
+	}
 
     private void Update() {
         if(Input.GetButtonDown("Reload") && PlayerStats.IsReloadingPossible()) {
@@ -75,7 +112,8 @@ public class Riffle : MonoBehaviour {
 
     private void Reload() {
         audio.PlayOneShot(soundReload);
-        PlayerStats.Reload();
+		isReloading = true;
+		reloadTimeLeft = 2.1f;
     }
 
     private Vector3 GetSpread() {
