@@ -553,6 +553,7 @@ MonoBehaviour:
   damage: 40
   range: 50
   fireRate: 10
+  spread: 7
   bulletHole: {fileID: 1906015260140540, guid: df5081d9470b6784c963595f8f1e27ec, type: 2}
   ignore:
     serializedVersion: 2
