@@ -11,6 +11,9 @@ public class Door : MonoBehaviour {
 
     public DoorOpeningDirection direction;
 
+	public GameObject key;
+	public AudioClip doorLockedSound;
+
     public float speed = 5.0f;
     public float offset = 2.5f;
     private float diff = 0.0f;
@@ -27,6 +30,11 @@ public class Door : MonoBehaviour {
     public void Open() {
         if (isOpened)
             return;
+
+		if (key != null) {
+			audio.PlayOneShot(doorLockedSound);
+			return;
+		}
 
         isOpening = true;
 
