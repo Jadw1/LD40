@@ -46,11 +46,11 @@ public class Door : MonoBehaviour {
             }
 
             if(direction == DoorOpeningDirection.LEFT) {
-                transform.position = pos + new Vector3(0.0f, 0.0f, diff);
+				transform.position = pos + transform.right * diff;
             }
             else if(direction == DoorOpeningDirection.RIGHT) {
-                transform.position = pos - new Vector3(0.0f, 0.0f, diff);
-            }
+                transform.position = pos - transform.right * diff;
+			}
         }
         else if(isOpened) {
             timer += Time.deltaTime;
