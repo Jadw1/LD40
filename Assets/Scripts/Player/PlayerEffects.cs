@@ -51,6 +51,11 @@ public class PlayerEffects : MonoBehaviour {
 		if (PlayerStats.getHealthPercent() <= 0.0f) {
 			deathScreen.SetActive(true);
 		}
+
+		// I update the randomness here.
+		FakeControls.Update();
+
+		FakeControls.SetRandomness(Mathf.Clamp01(alcohol / 20.0f));
 	}
 
 	public void playDrinkingSound() {

@@ -19,15 +19,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-        float horizontalRotation = Input.GetAxis("Mouse X");
+        float horizontalRotation = FakeControls.GetMouseX();
         transform.Rotate(0.0f, horizontalRotation * rotationSpeed, 0.0f);
 
-        verticalRotation -= Input.GetAxis("Mouse Y");
+		verticalRotation -= FakeControls.GetMouseY();
         verticalRotation = Mathf.Clamp(verticalRotation, -verticalRotationLimit, verticalRotationLimit);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation * rotationSpeed, 0.0f, 0.0f);
 
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        Vector3 movement = new Vector3(FakeControls.GetHorizontal(), 0.0f, FakeControls.GetVertical());
         controller.Move(transform.TransformDirection(movement) * Time.deltaTime * speed);
-        
 	}
 }

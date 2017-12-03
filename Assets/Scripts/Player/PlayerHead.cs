@@ -15,7 +15,7 @@ public class PlayerHead : MonoBehaviour {
 	}
 
 	private void Update() {
-		float bobAmount = Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"));
+		float bobAmount = Mathf.Abs(FakeControls.GetVertical()) + Mathf.Abs(FakeControls.GetHorizontal());
 		bobAmount = Mathf.Clamp01(bobAmount);
 
 		bobTimer += maxHeadBobSpeed * bobAmount;
