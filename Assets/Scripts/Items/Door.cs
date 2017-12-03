@@ -23,8 +23,6 @@ public class Door : MonoBehaviour {
     private bool isClosing = false;
 
     public void Open() {
-        Debug.Log("aaaaaa");
-
         if (isOpened)
             return;
 
@@ -35,7 +33,6 @@ public class Door : MonoBehaviour {
         pos = transform.position;
     }
 
-    // Update is called once per frame
     void Update () {
 		if(isOpening) {
             diff += offset * speed * Time.deltaTime;
@@ -67,10 +64,10 @@ public class Door : MonoBehaviour {
                 isClosing = false;
             }
             if (direction == DoorOpeningDirection.LEFT) {
-                transform.position = pos + new Vector3(0.0f, 0.0f, diff);
+                transform.position = pos + transform.right * diff;
             }
             else if (direction == DoorOpeningDirection.RIGHT) {
-                transform.position = pos - new Vector3(0.0f, 0.0f, diff);
+                transform.position = pos - transform.right * diff;
             }
         }
 	}
