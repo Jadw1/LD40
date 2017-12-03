@@ -11,7 +11,7 @@ public class Door : MonoBehaviour {
 
     public DoorOpeningDirection direction;
 
-	public GameObject key;
+	public List<GameObject> keys;
 	public AudioClip doorLockedSound;
 
     public float speed = 5.0f;
@@ -27,11 +27,19 @@ public class Door : MonoBehaviour {
 
 	private AudioSource audio;
 
+    private bool IsKeysEmpty() {
+        foreach(GameObject key in keys) {
+            if (key != null)
+                return false;
+        }
+        return true;
+    }
+
     public void Open() {
         if (isOpened)
             return;
 
-		if (key != null) {
+		if (!IsKeysEmpty()) {
 			audio.PlayOneShot(doorLockedSound);
 			return;
 		}
@@ -39,6 +47,10 @@ public class Door : MonoBehaviour {
         isOpening = true;
 
 		audio.Play();
+    }
+
+    private void Awake() {
+        keys = new List<GameObject>();
     }
 
     private void Start() {
