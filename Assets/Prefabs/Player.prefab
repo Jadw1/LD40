@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 124235196393524970}
   - component: {fileID: 81227164956942752}
   - component: {fileID: 114265772912318964}
-  - component: {fileID: 114297873043704770}
   - component: {fileID: 114489226453053626}
   m_Layer: 0
   m_Name: Main Camera
@@ -487,19 +486,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bobbingSpeed: 0.2
   bobbingHeight: 0.1
---- !u!114 &114297873043704770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1952169759655280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42cd8dcae69d178488f5efa28e7c7e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
-  BlockCount: 512
 --- !u!114 &114489226453053626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -535,11 +521,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652eb4b52f807e5478b705c0670e01ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 114297873043704770}
   weaponCamera: {fileID: 114938890650362956}
   drinkingSound: {fileID: 8300000, guid: 260d32955679acb4799bb04b0a557869, type: 3}
   generalSounds: {fileID: 82637053381395638}
   footsteps: {fileID: 82598511751144328}
+  deathScreen: {fileID: 0}
 --- !u!114 &114677753260029496
 MonoBehaviour:
   m_ObjectHideFlags: 1

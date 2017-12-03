@@ -22,10 +22,9 @@ public class PlayerHead : MonoBehaviour {
 		if (bobTimer > 2 * Mathf.PI) bobTimer -= 2 * Mathf.PI;
 
 		if (bobAmount == 0) {
-			if (bobTimer < 0) bobTimer += maxHeadBobSpeed * Time.deltaTime;
-			else if (bobTimer > 0) bobTimer -= maxHeadBobSpeed * Time.deltaTime;
-
-			if (Mathf.Abs(bobTimer) < 0.01f) bobTimer = 0.0f;
+			if (bobTimer < -0.05f) bobTimer += maxHeadBobSpeed * Time.deltaTime;
+			else if (bobTimer > 0.05f) bobTimer -= maxHeadBobSpeed * Time.deltaTime;
+			else bobTimer = 0.0f;
 		}
 
 		Vector3 newPos = originalPos + Vector3.up * Mathf.Sin(bobTimer) * maxHeadOffset; ;
