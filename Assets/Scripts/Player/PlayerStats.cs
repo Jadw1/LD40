@@ -29,6 +29,8 @@ public class PlayerStats : MonoBehaviour {
 	private static PlayerEffects player;
 	private static PlayerStats stats;
 
+    public ScreenBlooding blooding;
+
     // Getters
     public static float damage {
         get { return defaultDamage * damageModifier; }
@@ -96,6 +98,8 @@ public class PlayerStats : MonoBehaviour {
 		currentHealth -= dmg;
 
 		Debug.Log("Damage done: " + dmg.ToString() + " HP: " + currentHealth.ToString());
+
+        stats.blooding.BloodScreen(dmg);
 
 		if (currentHealth < 0.0f) currentHealth = 0.0f;
 	}
