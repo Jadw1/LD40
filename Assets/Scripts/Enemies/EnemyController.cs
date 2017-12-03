@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour {
 	public Transform player;
 
 	public float detectionRange = 10.0f;
-
+	public float damage = 5.0f;
 	public float movementSpeed = 5.0f;
 
 	public AudioClip shootSound;
@@ -36,9 +36,20 @@ public class EnemyController : MonoBehaviour {
 
 			if (dt > attackDelay) {
 				dt = 0.0f;
-				audio.PlayOneShot(shootSound);
 
 				// I probably want to injure the player here
+				RaycastHit hit;
+
+				Debug.DrawRay(transform.position, -transform.forward);
+
+				if (Physics.Raycast(transform.position, -transform.forward, out hit)) {
+					Debug.Log(hit.collider.name);
+
+					if (hit.collider.tag == "Player") {
+						audio.PlayOneShot(shootSound);
+						PlayerStats.dealDamage(damage);
+					}
+				}
 			}
 		}
 		else {

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114359423139169472}
   - component: {fileID: 143146924218069558}
   - component: {fileID: 82090647879801876}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719192666181952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.85, y: 1, z: 3.06}
+  m_LocalPosition: {x: -11.21, y: 1, z: 3.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   detectionRange: 10
+  damage: 5
   movementSpeed: 3
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
