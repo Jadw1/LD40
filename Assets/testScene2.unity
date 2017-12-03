@@ -669,6 +669,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114534622501022974, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
+        type: 2}
+      propertyPath: blooding
+      value: 
+      objectReference: {fileID: 1258382735}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5a035418ae5fe4a8f25027cb7f6fb8, type: 2}
   m_IsPrefabParent: 0
@@ -1759,12 +1764,12 @@ Prefab:
     - target: {fileID: 224370693525195026, guid: d01543fc850f0784c892735316c30e0c,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 716
+      value: 474
       objectReference: {fileID: 0}
     - target: {fileID: 224370693525195026, guid: d01543fc850f0784c892735316c30e0c,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 316.5
+      value: 317
       objectReference: {fileID: 0}
     - target: {fileID: 224370693525195026, guid: d01543fc850f0784c892735316c30e0c,
         type: 2}
@@ -2051,6 +2056,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4977442909820448, guid: 7a0a9bc840d4dc148b1d176a16c27c35,
     type: 2}
   m_PrefabInternal: {fileID: 691149931}
+--- !u!114 &1258382735 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114935030935012246, guid: d01543fc850f0784c892735316c30e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1121518285}
+  m_Script: {fileID: 11500000, guid: d5665794196d63c41a1bb915c9f91179, type: 3}
 --- !u!1001 &1272834183
 Prefab:
   m_ObjectHideFlags: 0
