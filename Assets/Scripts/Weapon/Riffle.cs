@@ -55,8 +55,6 @@ public class Riffle : MonoBehaviour {
 			return;
 		}
 
-        Ray ray = Camera.main.ScreenPointToRay(GetSpread());
-        RaycastHit hit;
         if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0) {
             if (fullAmmo)
                 fullAmmoCount++;
@@ -67,8 +65,11 @@ public class Riffle : MonoBehaviour {
 			// Sound
 			audio.PlayOneShot(soundShoot);
 
-			// Hit logic
-            if(Physics.Raycast(ray, out hit, range, ~ignore)) {
+            // Hit logic
+            Ray ray = Camera.main.ScreenPointToRay(GetSpread());
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, range, ~ignore)) {
                 if (hit.collider.tag == "Enemy") {
                     EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();
                     if (enemy != null) {
@@ -79,31 +80,43 @@ public class Riffle : MonoBehaviour {
                     }
                 }
                 else {
-                    Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    Transform hole = Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)).transform;
+                    hole.parent = hit.collider.transform;
                 }
             }
-
             PlayerStats.RemoveOneBullet();
-
-			transform.localPosition = gunPos + Random.insideUnitSphere * 0.01f;
-
-			float r = Random.Range(0.8f, 1.0f);
-
-			muzzleflash.color = new Color(r, r, r, r);
-
-			return;
+            Effect();
         }
         else if(!Input.GetButton("Fire1") && PlayerStats.clip > 0) {
             fullAmmo = false;
             fullAmmoCount = 0;
+
+            DiscardEffect();
+        }
+        else {
+            DiscardEffect();            
         }
 
-		offset = Mathf.Lerp(offset, 0.0f, 0.1f);
-		transform.localPosition = gunPos + transform.up * offset;
-
-		muzzleflash.color = new Color(0, 0, 0, 0);
 	}
 
+    private void Effect() {
+        transform.localPosition = gunPos + Random.insideUnitSphere * 0.01f;
+
+        muzzleflash.transform.Rotate(new Vector3(0.0f, 0.0f, Random.Range(-15.0f, 40.0f)));
+        //muzzleflash.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 90.0f));
+        muzzleflash.transform.localScale = new Vector3(1.0f, 1.0f, Random.Range(0.65f, 1.25f));
+
+        float r = Random.Range(0.8f, 1.0f);
+        muzzleflash.color = new Color(r, r, r, r);
+    }
+
+    private void DiscardEffect() {
+        offset = Mathf.Lerp(offset, 0.0f, 0.1f);
+        transform.localPosition = gunPos + transform.up * offset;
+
+        muzzleflash.color = new Color(0, 0, 0, 0);
+    }
+         
     private void Update() {
         if(Input.GetButtonDown("Reload") && PlayerStats.IsReloadingPossible()) {
             Reload();
