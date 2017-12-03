@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public static class PlayerStats {
+public class PlayerStats : MonoBehaviour {
 	// Max values
 	private const float maxHealth = 100.0f;
 	private const float maxArmor = 100.0f;
@@ -25,6 +25,7 @@ public static class PlayerStats {
 
 	// Player effects object for sound effects
 	private static PlayerEffects player;
+	private static PlayerStats stats;
 
     // Getters
     public static float damage {
@@ -89,6 +90,8 @@ public static class PlayerStats {
 
 		currentHealth -= dmg;
 
+		Debug.Log("Damage done: " + dmg.ToString() + " HP: " + currentHealth.ToString());
+
 		if (currentHealth < 0.0f) currentHealth = 0.0f;
 	}
 
@@ -129,7 +132,14 @@ public static class PlayerStats {
 
 	public static float getHealthPercent() { return (currentHealth / maxHealth); }
 
-	public static void registerPlayerEffects(PlayerEffects effects) {
-		player = effects;
+	public static GameObject getPlayer() {
+		return stats.gameObject;
+	}
+
+	private void Start() {
+		player = GetComponent<PlayerEffects>();
+		stats = this;
+
+		reset();
 	}
 }

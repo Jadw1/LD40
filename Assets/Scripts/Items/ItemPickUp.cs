@@ -12,7 +12,8 @@ public class ItemPickUp : MonoBehaviour {
 		HEAL,
 		ARMOR,
 		DAMAGE,
-		DAMAGE_DIRECT
+		DAMAGE_DIRECT,
+		AMMO
 	};
 
 	public float strength = 1.0f;
@@ -44,6 +45,12 @@ public class ItemPickUp : MonoBehaviour {
 				case Type.ARMOR:
 					PlayerStats.addArmor(strength);
 					Destroy(this.gameObject);
+					break;
+				case Type.AMMO:
+					if (!PlayerStats.IsAmmoFull()) {
+						PlayerStats.AddAmmo((int) strength);
+						Destroy(this.gameObject);
+					}
 					break;
 
 				default: break;

@@ -4,8 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class EnemyController : MonoBehaviour {
-	public Transform player;
-
 	public float detectionRange = 10.0f;
 	public float damage = 5.0f;
 	public float movementSpeed = 5.0f;
@@ -27,6 +25,9 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	private void Update() {
+
+		Transform player = PlayerStats.getPlayer().transform;
+
 		Vector3 direction = player.position - transform.position;
 
 		if (direction.magnitude < detectionRange && stats.getHealthPercent() > 0.0f) {
@@ -42,8 +43,7 @@ public class EnemyController : MonoBehaviour {
 
 				Debug.DrawRay(transform.position, transform.forward);
 
-				if (Physics.Raycast(transform.position, transform.forward, out hit)) {
-					Debug.Log(hit.collider.name);
+				if (Physics.Raycast(transform.position, direction, out hit)) {
 
 					if (hit.collider.tag == "Player") {
 						audio.PlayOneShot(shootSound);
