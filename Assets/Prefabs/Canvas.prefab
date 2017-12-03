@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 224894232806335582}
   - component: {fileID: 222738323316684878}
   - component: {fileID: 114520691821202646}
-  - component: {fileID: 114063399881049986}
+  - component: {fileID: 114609363317224688}
   m_Layer: 5
   m_Name: Heart Normal
   m_TagString: Untagged
@@ -414,20 +414,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114063399881049986
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506323849900400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5665794196d63c41a1bb915c9f91179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadingSpeed: 30
-  damageFactor: 10
-  alpha: 0
 --- !u!114 &114078238412202444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -712,6 +698,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114609363317224688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506323849900400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201ca80abb94ca14198c000b016f32c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114691212457160946
 MonoBehaviour:
   m_ObjectHideFlags: 1
