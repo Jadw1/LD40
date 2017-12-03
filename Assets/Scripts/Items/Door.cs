@@ -55,8 +55,9 @@ public class Door : MonoBehaviour {
         else if(isOpened) {
             timer += Time.deltaTime;
             if(timer >= timeToClose) {
-                isOpening = false;
+                isOpened = false;
                 isClosing = true;
+                timer = 0.0f;
             }
         }
         else if(isClosing) {
@@ -66,10 +67,10 @@ public class Door : MonoBehaviour {
                 isClosing = false;
             }
             if (direction == DoorOpeningDirection.LEFT) {
-                transform.position = pos - new Vector3(0.0f, 0.0f, diff);
+                transform.position = pos + new Vector3(0.0f, 0.0f, diff);
             }
             else if (direction == DoorOpeningDirection.RIGHT) {
-                transform.position = pos + new Vector3(0.0f, 0.0f, diff);
+                transform.position = pos - new Vector3(0.0f, 0.0f, diff);
             }
         }
 	}
