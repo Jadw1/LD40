@@ -40,9 +40,9 @@ public class EnemyController : MonoBehaviour {
 				// I probably want to injure the player here
 				RaycastHit hit;
 
-				Debug.DrawRay(transform.position, -transform.forward);
+				Debug.DrawRay(transform.position, transform.forward);
 
-				if (Physics.Raycast(transform.position, -transform.forward, out hit)) {
+				if (Physics.Raycast(transform.position, transform.forward, out hit)) {
 					Debug.Log(hit.collider.name);
 
 					if (hit.collider.tag == "Player") {
