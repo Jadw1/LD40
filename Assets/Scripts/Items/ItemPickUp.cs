@@ -9,6 +9,7 @@ public class ItemPickUp : MonoBehaviour {
 
 	public enum Type {
 		ALCOHOL,
+		ZAGRYZKA,
 		HEAL,
 		ARMOR,
 		DAMAGE,
@@ -27,9 +28,14 @@ public class ItemPickUp : MonoBehaviour {
 		if (other != null && other.tag == "Player") {
 			switch (itemType) {
 				case Type.ALCOHOL:
-					PlayerStats.addAlcohol(strength);
+					PlayerStats.addAlcohol();
+					PlayerStats.addHealTime(strength);
 					Destroy(this.gameObject);
 					return;
+				case Type.ZAGRYZKA:
+					PlayerStats.removeAlcohol();
+					Destroy(this.gameObject);
+					break;
 				case Type.HEAL:
 					PlayerStats.heal(strength);
 					Destroy(this.gameObject);

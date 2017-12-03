@@ -8,20 +8,22 @@ public class PlayerStats : MonoBehaviour {
 	// Default constant values
 	private const float defaultHealth = maxHealth;
 	private const float defaultArmor = 0.0f;
-	private const float defaultAlcohol = 0.0f;
     private const float defaultDamage = 30.0f;
+	private const float defaultHealTime = 0.0f;
     private const int defaultMaxAmmo = 150;
     private const int defaultMaxClip = 20;
+	private const int defaultAlcohol = 0;
 
 	// Current stats
 	private static float currentHealth = defaultHealth;
 	private static float currentArmor = defaultArmor;
-	private static float currentAlcohol = defaultAlcohol;
-    private static int currentAmmo = defaultMaxAmmo;
+	private static float currentHealTime = defaultHealTime;
+	private static int currentAmmo = defaultMaxAmmo;
     private static int currentClip = defaultMaxClip;
+	private static int currentAlcohol = defaultAlcohol;
 
-    // Modifiers
-    public static float damageModifier = 1.0f;
+	// Modifiers
+	public static float damageModifier = 1.0f;
 
 	// Player effects object for sound effects
 	private static PlayerEffects player;
@@ -31,18 +33,21 @@ public class PlayerStats : MonoBehaviour {
     public static float damage {
         get { return defaultDamage * damageModifier; }
     }
-    public static int clip {
+	public static float healTime {
+		get { return currentHealTime; }
+	}
+	public static int clip {
         get { return currentClip; }
     }
     public static int ammo {
         get { return currentAmmo; }
     }
-	public static float alcohol {
+	public static int alcohol {
         get { return currentAlcohol; }
     }
 
 	// Value functions (we don't need setters for everything)
-    public static void RemoveOneBullet() {  // xdddddddd
+	public static void RemoveOneBullet() {  // xdddddddd
         currentClip = Mathf.Clamp(currentClip - 1, 0, defaultMaxClip);
     }
 
@@ -95,6 +100,15 @@ public class PlayerStats : MonoBehaviour {
 		if (currentHealth < 0.0f) currentHealth = 0.0f;
 	}
 
+	public static void addHealTime(float time) {
+		currentHealTime += time;
+	}
+
+	public static void removeHealTime(float time) {
+		currentHealTime -= time;
+		if (currentHealTime < 0.0f) currentHealTime = 0.0f;
+	}
+
 	public static void heal(float amount) {
 		currentHealth += amount;
 		if (currentHealth > maxHealth) currentHealth = maxHealth;
@@ -112,17 +126,19 @@ public class PlayerStats : MonoBehaviour {
 		if (currentArmor < 0.0f) currentArmor = 0.0f;
 	}
 
-	public static void addAlcohol(float amount) {
-		currentAlcohol += amount;
+	public static void addAlcohol() {
+		currentAlcohol++;
+
+		if (currentAlcohol > getAlcoholLimit()) currentAlcohol = getAlcoholLimit();
 
 		if (player != null) player.playDrinkingSound();
 	}
 
-	public static void removeAlcohol(float amount) {
-		currentAlcohol -= amount;
-		if (currentAlcohol < 0.0f) currentAlcohol = 0.0f;
-	}
+	public static int getAlcoholLimit() { return 5; }
 
+	public static void removeAlcohol() {
+		currentAlcohol = 0;
+	}
 
 	public static void reset() {
 		currentArmor = defaultArmor;

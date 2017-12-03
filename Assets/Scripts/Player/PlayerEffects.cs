@@ -24,23 +24,17 @@ public class PlayerEffects : MonoBehaviour {
 
 	private void Update() {
 		// Alcohol effects
-		float alcohol = PlayerStats.alcohol - 5.0f;
-
-		if (alcohol < 0.0f) alcohol = 0.0f;
-		if (alcohol > 20.0f) alcohol = 20.0f;
+		float alcohol = PlayerStats.alcohol;
 		
-		weaponCamera.BlockCount = 512.0f - (alcohol / 20.0f) * 384.0f;
+		weaponCamera.BlockCount = 512.0f - (alcohol / (float) PlayerStats.getAlcoholLimit()) * 384.0f;
 
 		tick += Time.deltaTime;
 
 		if (tick > 0.25f) {
 			tick -= 0.25f;
 
-			// Alcohol will heal you.
-			if (alcohol > 0.0f) PlayerStats.heal(1.0f);
-
-			// Decrease alcohol
-			PlayerStats.removeAlcohol(0.1f);
+			if (PlayerStats.healTime > 0.0f) PlayerStats.heal(2.5f);
+			PlayerStats.removeHealTime(0.25f);
 		}
 
 		// At one point I want to check the type of the ground and if the player is grounded.
@@ -54,8 +48,7 @@ public class PlayerEffects : MonoBehaviour {
 
 		// I update the randomness here.
 		FakeControls.Update();
-
-		FakeControls.SetRandomness(Mathf.Clamp01(alcohol / 20.0f));
+		FakeControls.SetRandomness(alcohol / (float)PlayerStats.getAlcoholLimit() * 0.5f);
 	}
 
 	public void playDrinkingSound() {
