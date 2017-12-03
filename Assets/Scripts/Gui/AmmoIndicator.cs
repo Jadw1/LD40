@@ -3,15 +3,31 @@ using UnityEngine;
 
 public class AmmoIndicator : MonoBehaviour {
 
-    private Text text;
+	private Image mag;
 
-    // Use this for initialization
-    void Start() {
-        text = GetComponent<Text>();
+	public Image mag1;
+	public Image mag2;
+	public Image mag3;
+
+	// Use this for initialization
+	void Start() {
+		mag = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update() {
-        text.text = PlayerStats.clip + " " + PlayerStats.ammo;
-    }
+		int ammo = PlayerStats.ammo;
+
+		int clip = PlayerStats.clip;
+
+		int m1 = Mathf.Clamp(ammo, 0, 30);
+		int m2 = Mathf.Clamp(ammo - 30, 0, 30);
+		int m3 = Mathf.Clamp(ammo - 60, 0, 30);
+
+		mag.fillAmount = clip / 30.0f;
+
+		mag1.fillAmount = m1 / 30.0f;
+		mag2.fillAmount = m2 / 30.0f;
+		mag3.fillAmount = m3 / 30.0f;
+	}
 }

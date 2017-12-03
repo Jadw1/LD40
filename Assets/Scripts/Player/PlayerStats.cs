@@ -10,8 +10,8 @@ public class PlayerStats : MonoBehaviour {
 	private const float defaultArmor = 0.0f;
     private const float defaultDamage = 30.0f;
 	private const float defaultHealTime = 0.0f;
-    private const int defaultMaxAmmo = 150;
-    private const int defaultMaxClip = 20;
+    private const int defaultMaxAmmo = 90;
+    private const int defaultMaxClip = 30;
 	private const int defaultAlcohol = 0;
 
 	// Current stats
