@@ -31,14 +31,8 @@ public class EnemyStats : MonoBehaviour {
 
 		currentHealth -= dmg;
 
-        if (currentHealth < 0.0f) {
-            KillMe();
-        }
+		if (currentHealth < 0.0f) currentHealth = 0.0f;
 	}
-
-    private void KillMe() {
-        Destroy(gameObject);
-    }
 
 	public float getHealthPercent() { return currentHealth / maxHealth; }
 }
