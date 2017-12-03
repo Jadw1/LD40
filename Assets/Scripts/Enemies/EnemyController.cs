@@ -10,25 +10,43 @@ public class EnemyController : MonoBehaviour {
 
 	public float movementSpeed = 5.0f;
 
+	public AudioClip shootSound;
+
+	private AudioSource audio;
 	private CharacterController character;
 	private EnemyStats stats;
 
-	public bool isMoving;
+	private float dt = 0.0f;
+
+	public float attackDelay = 1.0f;
 
 	private void Start() {
 		character = GetComponent<CharacterController>();
 		stats = GetComponent<EnemyStats>();
+		audio = GetComponent<AudioSource>();
 	}
 
 	private void Update() {
 		Vector3 direction = player.position - transform.position;
 
-		if (direction.magnitude < detectionRange && stats.getHealthPercent() > 0.0f) direction = direction.normalized;
-		else direction = Vector3.zero;
+		if (direction.magnitude < detectionRange && stats.getHealthPercent() > 0.0f) {
+			direction = direction.normalized;
+
+			dt += Time.deltaTime;
+
+			if (dt > attackDelay) {
+				dt = 0.0f;
+				audio.PlayOneShot(shootSound);
+
+				// I probably want to injure the player here
+			}
+		}
+		else {
+			direction = Vector3.zero;
+			dt = 0.0f;
+		}
 
 		character.Move(direction * Time.deltaTime * movementSpeed);
-
-		isMoving = isWalking();
 	}
 
 	public bool isWalking() {
