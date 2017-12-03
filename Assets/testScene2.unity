@@ -264,8 +264,13 @@ Prefab:
     - target: {fileID: 114040540142012420, guid: ea6e7ff88a038b24dbf2decd26cc09dc,
         type: 2}
       propertyPath: speed
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 82218717651801004, guid: ea6e7ff88a038b24dbf2decd26cc09dc,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 74900a0a13f989549ba05a47f3d69f3e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea6e7ff88a038b24dbf2decd26cc09dc, type: 2}
   m_IsPrefabParent: 0

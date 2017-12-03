@@ -22,15 +22,21 @@ public class Door : MonoBehaviour {
     private bool isOpening = false;
     private bool isClosing = false;
 
+	private AudioSource audio;
+
     public void Open() {
         if (isOpened)
             return;
 
         isOpening = true;
+
+		audio.Play();
     }
 
     private void Start() {
         pos = transform.position;
+
+		audio = GetComponent<AudioSource>();
     }
 
     void Update () {
@@ -55,7 +61,9 @@ public class Door : MonoBehaviour {
                 isOpened = false;
                 isClosing = true;
                 timer = 0.0f;
-            }
+
+				audio.Play();
+			}
         }
         else if(isClosing) {
             diff -= offset * speed * Time.deltaTime;
