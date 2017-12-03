@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acda1e906d905b143b8336d2113df6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   detectionRange: 10
   damage: 5
   movementSpeed: 3

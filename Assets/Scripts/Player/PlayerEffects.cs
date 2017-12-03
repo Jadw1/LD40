@@ -19,8 +19,6 @@ public class PlayerEffects : MonoBehaviour {
 	private void Start() {
 		character = GetComponent<CharacterController>();
 		headBob = GetComponentInChildren<HeadBobbing>();
-
-		PlayerStats.registerPlayerEffects(this);
 	}
 
 	private void Update() {
@@ -37,6 +35,9 @@ public class PlayerEffects : MonoBehaviour {
 
 		if (tick > 0.25f) {
 			tick -= 0.25f;
+
+			// Alcohol will heal you.
+			if (alcohol > 0.0f) PlayerStats.heal(1.0f);
 
 			// Decrease alcohol
 			PlayerStats.removeAlcohol(0.1f);
