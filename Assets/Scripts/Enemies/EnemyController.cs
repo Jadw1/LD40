@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class EnemyController : MonoBehaviour {
 	public float detectionRange = 10.0f;
+	public float minDistance = 5.0f;
 	public float damage = 5.0f;
 	public float movementSpeed = 5.0f;
 
@@ -23,6 +24,10 @@ public class EnemyController : MonoBehaviour {
     private float muzzleDelay = 0.5f;
     private float muzzleTimer = 0.0f;
 
+	private bool hasSeenPlayer;
+
+	public LayerMask layerMask;
+
 	private void Start() {
 		character = GetComponent<CharacterController>();
 		stats = GetComponent<EnemyStats>();
@@ -30,6 +35,7 @@ public class EnemyController : MonoBehaviour {
 
         DiscardEffect();
 
+		hasSeenPlayer = false;
     }
 
 	private void Update() {
@@ -38,8 +44,11 @@ public class EnemyController : MonoBehaviour {
 
 		Vector3 direction = player.position - transform.position;
 
-		if (direction.magnitude < detectionRange && stats.getHealthPercent() > 0.0f) {
-			direction = direction.normalized;
+		float distance = direction.magnitude;
+
+		direction = direction.normalized;
+
+		if (hasSeenPlayer && distance < detectionRange && stats.getHealthPercent() > 0.0f) {
 
 			dt += Time.deltaTime;
 
@@ -49,13 +58,17 @@ public class EnemyController : MonoBehaviour {
 				// I probably want to injure the player here
 				RaycastHit hit;
 
-				Debug.DrawRay(transform.position, transform.forward);
-
 				if (Physics.Raycast(transform.position, direction, out hit)) {
 
 					if (hit.collider.tag == "Player") {
 						audio.PlayOneShot(shootSound);
 						PlayerStats.DealDamage(damage);
+					} else if (hit.collider.tag == "Destroyable") {
+						EnemyStats crateStats = hit.collider.GetComponent<EnemyStats>();
+
+						if (crateStats != null) {
+							crateStats.dealDamage(damage);
+						}
 					}
 				}
 
@@ -66,11 +79,24 @@ public class EnemyController : MonoBehaviour {
             }
 		}
 		else {
+			if (!hasSeenPlayer) {
+				RaycastHit hit;
+
+				if (Physics.Raycast(transform.position, direction, out hit, detectionRange, ~layerMask)) {
+
+					if (hit.collider.tag == "Player") {
+						hasSeenPlayer = true;
+					}
+				}
+			}
+
 			direction = Vector3.zero;
 			dt = 0.0f;
 		}
 
 		direction.y = 0;
+
+		if (distance <= minDistance) direction = Vector3.zero;
 
 		character.SimpleMove(direction * movementSpeed);
 
