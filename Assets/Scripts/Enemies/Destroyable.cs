@@ -11,7 +11,10 @@ public class Destroyable : MonoBehaviour {
 	}
 
 	private void Update() {
-        if (stats.getHealthPercent() <= 0.0f)
-            stats.KillEnemy();
+        if (stats.getHealthPercent() <= 0.0f) {
+			PlayerStats.PlayDestroySound();
+			stats.KillEnemy();
+		}
+            
 	}
 }

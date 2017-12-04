@@ -9,6 +9,7 @@ public class PlayerEffects : MonoBehaviour {
 	public AudioClip drinkingSound;
 	public AudioClip eatingSound;
 	public AudioClip ammoSound;
+	public AudioClip destroySound;
 
 	public AudioSource generalSounds;
 	public AudioSource footsteps;
@@ -79,5 +80,9 @@ public class PlayerEffects : MonoBehaviour {
 
 	public void PlayEatingSound() {
 		generalSounds.PlayOneShot(eatingSound);
+	}
+
+	public void PlayDestroySound() {
+		generalSounds.PlayOneShot(destroySound);
 	}
 }

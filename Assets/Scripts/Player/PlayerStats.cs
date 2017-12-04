@@ -166,6 +166,10 @@ public class PlayerStats : MonoBehaviour {
 		player.Win();
 	}
 
+	public static void PlayDestroySound() {
+		player.PlayDestroySound();
+	}
+
 	public static float GetHealthPercent() { return (currentHealth / maxHealth); }
 
 	public static GameObject GetPlayer() {
