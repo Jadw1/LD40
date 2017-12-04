@@ -49,10 +49,6 @@ public class Door : MonoBehaviour {
 		audio.Play();
     }
 
-    private void Awake() {
-        keys = new List<GameObject>();
-    }
-
     private void Start() {
         pos = transform.position;
 
