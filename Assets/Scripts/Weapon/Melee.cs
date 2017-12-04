@@ -13,11 +13,15 @@ public class Melee : MonoBehaviour {
     public LayerMask ignore;
 
     public GameObject enemyBlood;
+    public Riffle riffle;
+
+    public bool canShoot = true;   //Zmien to na true na koniec animacji
 
     private void FixedUpdate() {
         if(Input.GetButtonDown("Fire2") && Time.time >= timeToAttack) {
             //Tutaj zacznij animacje
 
+            canShoot = false;
             timeToAttack = Time.time + 1 / rate;
         }
     }

@@ -1787,6 +1787,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 516
   enemyBlood: {fileID: 1311250952839424, guid: 0354e4262c8e79c469f68bd5534fb345, type: 2}
+  riffle: {fileID: 114677753260029496}
+  canShoot: 1
 --- !u!114 &114351521623168354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2282,6 +2284,7 @@ MonoBehaviour:
   soundReload: {fileID: 8300000, guid: feda09b6b519fe940a89e505d9e7538c, type: 3}
   muzzleflash: {fileID: 212972659665705676}
   enemyBlood: {fileID: 1311250952839424, guid: 0354e4262c8e79c469f68bd5534fb345, type: 2}
+  melee: {fileID: 114308078869421098}
 --- !u!114 &114703236607034012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3329,7 +3332,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401799046860660}
   m_LocalRotation: {x: -0, y: 0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 0, y: 0, z: -628.2539}
+  m_LocalPosition: {x: 0, y: 0, z: -628.0147}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 4725634317888650}

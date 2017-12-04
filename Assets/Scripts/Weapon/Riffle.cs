@@ -21,6 +21,7 @@ public class Riffle : MonoBehaviour {
     public GameObject enemyBlood;
 
 	private AudioSource audio;
+    public Melee melee;
 
     private bool fullAmmo = false;
     private int fullAmmoCount = 0;
@@ -56,7 +57,7 @@ public class Riffle : MonoBehaviour {
 			return;
 		}
 
-        if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0) {
+        if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0 && melee.canShoot) {
             if (fullAmmo)
                 fullAmmoCount++;
             fullAmmo = true;
