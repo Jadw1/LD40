@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
 	public GameObject pauseMenu;
+	public AudioSource music;
+
+	public Slider gameVolume;
+	public Slider musicVolume;
 
 	private bool isPaused = false;
 	private bool canUnpause = true;
@@ -53,5 +58,13 @@ public class PauseMenu : MonoBehaviour {
 
 	public void OnButtonExit() {
 		Application.Quit();
+	}
+
+	public void ChangeGameVolume() {
+		AudioListener.volume = gameVolume.value;
+	}
+
+	public void ChangeMusicVolume() {
+		music.volume = musicVolume.value;
 	}
 }
