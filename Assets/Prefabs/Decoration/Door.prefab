@@ -192,7 +192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  key: {fileID: 0}
+  keys: []
+  diodes: []
+  positiveColor: {r: 0, g: 0, b: 0, a: 0}
+  negativeColor: {r: 0, g: 0, b: 0, a: 0}
   doorLockedSound: {fileID: 8300000, guid: 3c62a1f7637b4c34181e95f0bc187225, type: 3}
   speed: 2.5
   offset: 2.5
