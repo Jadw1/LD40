@@ -22,6 +22,8 @@ public class PlayerEffects : MonoBehaviour {
 	private CharacterController character;
 	private HeadBobbing headBob;
 
+	public float healPerTick = 1.5f;
+
 	private float tick = 0.0f;
 
 	private void Start() {
@@ -44,7 +46,7 @@ public class PlayerEffects : MonoBehaviour {
 		if (tick > 0.25f) {
 			tick -= 0.25f;
 
-			if (PlayerStats.healTime > 0.0f) PlayerStats.Heal(2.5f);
+			if (PlayerStats.healTime > 0.0f) PlayerStats.Heal(healPerTick);
 			PlayerStats.RemoveHealTime(0.25f);
 		}
 
