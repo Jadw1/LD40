@@ -9,25 +9,31 @@ ModelImporter:
     100002: Plane
     100004: Suzanne
     100006: Suzanne_001
+    100008: Plane_001
     400000: //RootNode
     400002: Plane
     400004: Suzanne
     400006: Suzanne_001
+    400008: Plane_001
     2300000: //RootNode
     2300002: Plane
     2300004: Suzanne
     2300006: Suzanne_001
+    2300008: Plane_001
     3300000: //RootNode
     3300002: Plane
     3300004: Suzanne
     3300006: Suzanne_001
+    3300008: Plane_001
     4300000: Plane
     4300002: Suzanne_001
     4300004: Suzanne
+    4300006: Plane_001
     6400000: //RootNode
     6400002: Plane
     6400004: Suzanne
     6400006: Suzanne_001
+    6400008: Plane_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -36,6 +42,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: None__bricks_wall_png
     second: {fileID: 2100000, guid: 143dd1c5125a02a469d55c660199abbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__ceiling_png
+    second: {fileID: 2100000, guid: 51906c420fa2f8949b02d9d12eb4aa18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -71,6 +82,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: None__trak2_wall1b_tga
     second: {fileID: 2100000, guid: 05a6877e93b094241ab607463bac0642, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__wood_floor_1_png
+    second: {fileID: 2100000, guid: bafcb67366290a6438ff638a1a2f5d4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__wood_floor_2_png
+    second: {fileID: 2100000, guid: 9362d858597951a4389c6d0ca8201922, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
