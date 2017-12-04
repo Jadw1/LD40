@@ -14,9 +14,12 @@ public class EnemyStats : MonoBehaviour {
 	public float currentHealth = maxHealth;
 	private float currentArmor = 0.0f;
 
-	private void Start() {
-		currentArmor = defaultArmor;
-	}
+    private Dropable drop;
+
+    private void Start() {
+        currentArmor = defaultArmor;
+        drop = GetComponent<Dropable>();
+    }
 
 	public void dealDamage(float damage, bool direct = false) {
 		float dmg = damage;
@@ -35,4 +38,11 @@ public class EnemyStats : MonoBehaviour {
 	}
 
 	public float getHealthPercent() { return currentHealth / maxHealth; }
+
+    public void KillEnemy() {
+        if(drop != null) {
+            drop.Drop();
+        }
+        Destroy(gameObject);
+    }
 }

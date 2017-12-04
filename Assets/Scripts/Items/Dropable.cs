@@ -5,21 +5,24 @@ using UnityEngine;
 public class Dropable : MonoBehaviour {
 
     public List<GameObject> items;
-
     public List<int> weights;
 
-    private void Awake() {
-        items = new List<GameObject>();
-        weights = new List<int>();
+    private void Start() {
+        while (weights.Count != items.Count) {
+            if (weights.Count > items.Count)
+                weights.Remove(weights.Count - 1);
+            if (weights.Count > items.Count)
+                weights.Add(0);
+        }
     }
 
-    private void OnDestroy() {
+    public void Drop() {
         int all = AllWeights();
         int rand = Random.Range(0, all);
 
         for(int i=0; i<items.Count; i++) {
             if(rand >= AllWeightsTo(i) && rand < AllWeightsTo(i+1)) {
-                Drop();
+                DropItem(i);
                 break;
             }
         }
@@ -27,7 +30,7 @@ public class Dropable : MonoBehaviour {
 
     private int AllWeights() {
         int sum = 0;
-        for(int i=0; i<items.Count; i++) {
+        for(int i=0; i<weights.Count; i++) {
             sum += weights[i];
         }
         return sum;
@@ -41,7 +44,9 @@ public class Dropable : MonoBehaviour {
         return sum;
     }
 
-    private void Drop() {
-
+    private void DropItem(int i) {
+        if(items[i] != null) {
+            Instantiate(items[i], transform.position, transform.rotation);
+        } 
     }
 }

@@ -56,7 +56,7 @@ public class EnemyAnim : MonoBehaviour {
 				if (currentFrame >= frameCount[0]) {
 					currentFrame = 0;
 
-					Destroy(this.gameObject);
+                    stats.KillEnemy();
 				}
 
 				renderer.sprite = deathFrames[currentFrame];

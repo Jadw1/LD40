@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114359423139169472}
   - component: {fileID: 143146924218069558}
   - component: {fileID: 82090647879801876}
+  - component: {fileID: 114601506513142158}
   m_Layer: 10
   m_Name: Enemy Soldier
   m_TagString: Enemy
@@ -68,7 +69,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719192666181952}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.21, y: 1, z: 3.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -184,6 +185,22 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
   muzzleFlash: {fileID: 212012496596495430}
+--- !u!114 &114601506513142158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719192666181952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5bc11d39674a249b28378a1723923b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1405324354896824, guid: 7a0a9bc840d4dc148b1d176a16c27c35, type: 2}
+  - {fileID: 1092666945742556, guid: 2803971b4442fc64a9013d193d71bd89, type: 2}
+  - {fileID: 1973239108327888, guid: 3be79d3bb0d473648a57d86b80a85e0e, type: 2}
+  weights: 070000000100000005000000
 --- !u!114 &114678918010490826
 MonoBehaviour:
   m_ObjectHideFlags: 1
