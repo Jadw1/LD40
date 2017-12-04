@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 143746394889580390}
   - component: {fileID: 82919580923398506}
   - component: {fileID: 114760728394275228}
-  - component: {fileID: 114975802367941812}
   m_Layer: 10
   m_Name: Guardian
   m_TagString: Enemy
@@ -58,8 +57,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779594458183282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.49, y: 1, z: 0.007}
-  m_LocalScale: {x: 1.25, y: 1, z: 1}
+  m_LocalPosition: {x: -25.47134, y: 1.173, z: -30.924858}
+  m_LocalScale: {x: 1.4, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4381887474887784}
   m_Father: {fileID: 0}
@@ -225,22 +224,6 @@ MonoBehaviour:
   defaultArmor: 200
   currentHealth: 250
 --- !u!114 &114760728394275228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1779594458183282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5bc11d39674a249b28378a1723923b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - {fileID: 1405324354896824, guid: 7a0a9bc840d4dc148b1d176a16c27c35, type: 2}
-  - {fileID: 1092666945742556, guid: 2803971b4442fc64a9013d193d71bd89, type: 2}
-  - {fileID: 1973239108327888, guid: 3be79d3bb0d473648a57d86b80a85e0e, type: 2}
-  weights: 060000000100000006000000
---- !u!114 &114975802367941812
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

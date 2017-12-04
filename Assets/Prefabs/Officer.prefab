@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 143706191279722984}
   - component: {fileID: 82701105984971430}
   - component: {fileID: 114871406184968008}
-  - component: {fileID: 114223390356084040}
   m_Layer: 10
   m_Name: Officer
   m_TagString: Enemy
@@ -71,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053486288312596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.520744, y: 1.461, z: 0.7749553}
+  m_LocalPosition: {x: -54.451637, y: 1.462, z: 0.50824434}
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4468807441829152}
@@ -158,22 +157,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114223390356084040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1053486288312596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5bc11d39674a249b28378a1723923b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - {fileID: 1405324354896824, guid: 7a0a9bc840d4dc148b1d176a16c27c35, type: 2}
-  - {fileID: 1092666945742556, guid: 2803971b4442fc64a9013d193d71bd89, type: 2}
-  - {fileID: 1973239108327888, guid: 3be79d3bb0d473648a57d86b80a85e0e, type: 2}
-  weights: 060000000100000006000000
 --- !u!114 &114253024789422432
 MonoBehaviour:
   m_ObjectHideFlags: 1

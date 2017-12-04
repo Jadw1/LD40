@@ -11,8 +11,8 @@ public class Door : MonoBehaviour {
 
     public DoorOpeningDirection direction;
 
-	public List<GameObject> keys;
-    public List<SpriteRenderer> diodes;
+	public GameObject[] keys;
+    public SpriteRenderer[] diodes;
     public Color positiveColor;
     public Color negativeColor;
 
@@ -36,6 +36,7 @@ public class Door : MonoBehaviour {
             if (key != null)
                 return false;
         }
+
         return true;
     }
 
@@ -60,24 +61,19 @@ public class Door : MonoBehaviour {
     }
 
     private void CheckKeys() {
-        for(int i=0; i<diodes.Count; i++) {
-        if (diodes[i] == null)
-            continue;
+        for (int i = 0; i < diodes.Length; i++) {
+			bool lit = true;
 
-        if(keys[i] != null) {
-            diodes[i].color = negativeColor;
-        }
-        else {
-            diodes[i].color = positiveColor;
-        }
-        }
+			if (i < keys.Length && keys[i] != null) lit = false;
 
+			diodes[i].color = lit ? positiveColor : negativeColor;
+		}
     }
 
     void Update () {
-        if(!IsKeysEmpty())  CheckKeys();
+		CheckKeys();
 
-		if(isOpening) {
+		if (isOpening) {
             diff += offset * speed * Time.deltaTime;
             if (diff > offset) {
                 diff = offset;
