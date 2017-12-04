@@ -18,6 +18,7 @@ public class Riffle : MonoBehaviour {
 	public AudioClip soundReload;
 
 	public SpriteRenderer muzzleflash;
+    public GameObject enemyBlood;
 
 	private AudioSource audio;
 
@@ -74,11 +75,25 @@ public class Riffle : MonoBehaviour {
                     EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();
                     if (enemy != null) {
                         enemy.dealDamage(PlayerStats.damage);
+
+                        Transform blood = Instantiate(enemyBlood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)).transform;
+                        blood.parent = hit.collider.transform;
                     }
                     else {
                         Debug.LogError("Cant find enemy!!!");
                     }
                 }
+                else if(hit.collider.tag == "Destroyable") {
+                    EnemyStats destroyable = hit.collider.GetComponent<EnemyStats>();
+                    if (destroyable != null) {
+                        destroyable.dealDamage(PlayerStats.damage);
+                    }
+                    else {
+                        Debug.LogError("Cant find destroyable!!!");
+                    }
+                }
+
+
                 else {
                     Transform hole = Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)).transform;
                     hole.parent = hit.collider.transform;

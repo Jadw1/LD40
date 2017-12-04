@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114167424432925720}
   m_Layer: 0
   m_Name: Wooden Chest
-  m_TagString: Enemy
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
