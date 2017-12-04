@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject pauseMenu;
 
 	private bool isPaused = false;
+	private bool canUnpause = true;
 
 	private void Update() {
 		if (Input.GetKeyDown(KeyCode.G)) {
@@ -14,7 +15,7 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
-	private void Pause() {
+	public void Pause() {
 		if (!pauseMenu.activeInHierarchy) {
 			pauseMenu.SetActive(true);
 			Cursor.lockState = CursorLockMode.None;
@@ -24,7 +25,9 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 
-	private void Unpause() {
+	public void Unpause() {
+		if (!canUnpause) return;
+
 		if (pauseMenu.activeInHierarchy) {
 			pauseMenu.SetActive(false);
 			Cursor.lockState = CursorLockMode.Locked;
@@ -33,6 +36,9 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
+	public void setCanUnpause(bool canUnpause) {
+		this.canUnpause = canUnpause;
+	}
 
 	public void OnButtonResume() {
 		if (isPaused) Unpause();
@@ -41,6 +47,8 @@ public class PauseMenu : MonoBehaviour {
 	public void OnButtonRestart() {
 		Application.LoadLevel(Application.loadedLevel);
 		if (isPaused) Unpause();
+		Time.timeScale = 1;
+		canUnpause = true;
 	}
 
 	public void OnButtonExit() {

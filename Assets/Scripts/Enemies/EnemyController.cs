@@ -70,7 +70,9 @@ public class EnemyController : MonoBehaviour {
 			dt = 0.0f;
 		}
 
-		character.Move(direction * Time.deltaTime * movementSpeed);
+		direction.y = 0;
+
+		character.SimpleMove(direction * movementSpeed);
 
         if(isMuzzleOn) {
             muzzleTimer += Time.deltaTime;

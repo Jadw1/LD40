@@ -10,6 +10,8 @@ public class PlayerEffects : MonoBehaviour {
 	public AudioSource generalSounds;
 	public AudioSource footsteps;
 
+	public PauseMenu pauseMenu;
+
 	public GameObject deathScreen;
 	public GameObject winScreen;
 
@@ -53,10 +55,15 @@ public class PlayerEffects : MonoBehaviour {
 
 	public void lose() {
 		deathScreen.SetActive(true);
+		pauseMenu.setCanUnpause(false);
+		Time.timeScale = 0;
+		
 	}
 
 	public void win() {
 		winScreen.SetActive(true);
+		pauseMenu.setCanUnpause(false);
+		Time.timeScale = 0;
 	}
 
 	public void playDrinkingSound() {
