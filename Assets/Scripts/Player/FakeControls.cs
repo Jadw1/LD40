@@ -25,8 +25,8 @@ public static class FakeControls {
 		randomness = amount;
 	}
 
-	public static float GetHorizontal() { return Input.GetAxis("Horizontal") + dir.x * randomness; }
-	public static float GetVertical() { return Input.GetAxis("Vertical") + dir.y * randomness; }
-	public static float GetMouseX() { return Input.GetAxis("Mouse X") + look.z * randomness; }
-	public static float GetMouseY() { return Input.GetAxis("Mouse Y") + look.y * randomness; }
+	public static float GetHorizontal() { return Time.timeScale != 0 ? Input.GetAxis("Horizontal") + dir.x * randomness : 0.0f; }
+	public static float GetVertical() { return Time.timeScale != 0 ? Input.GetAxis("Vertical") + dir.y * randomness : 0.0f; }
+	public static float GetMouseX() { return Time.timeScale != 0 ? Input.GetAxis("Mouse X") + look.z * randomness : 0.0f; }
+	public static float GetMouseY() { return Time.timeScale != 0 ? Input.GetAxis("Mouse Y") + look.y * randomness : 0.0f; }
 }

@@ -24,6 +24,10 @@ public class PlayerEffects : MonoBehaviour {
 	}
 
 	private void Update() {
+		if (Time.timeScale == 0) {
+			if (footsteps.isPlaying) footsteps.Stop();
+			return;
+		}
 		// Alcohol effects
 		float alcohol = PlayerStats.alcohol;
 		

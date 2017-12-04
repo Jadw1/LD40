@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void Update () {
-        float horizontalRotation = FakeControls.GetMouseX();
+		if (Time.timeScale == 0) return;
+
+		float horizontalRotation = FakeControls.GetMouseX();
         transform.Rotate(0.0f, horizontalRotation * rotationSpeed, 0.0f);
 
 		verticalRotation -= FakeControls.GetMouseY();

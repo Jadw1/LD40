@@ -151,6 +151,9 @@ public class PlayerStats : MonoBehaviour {
 		currentArmor = defaultArmor;
 		currentHealth = defaultHealth;
 		currentAlcohol = defaultAlcohol;
+		currentAmmo = defaultMaxAmmo;
+		currentClip = defaultMaxClip;
+		currentHealTime = defaultHealTime;
 	}
 
 	public static void Lose() {

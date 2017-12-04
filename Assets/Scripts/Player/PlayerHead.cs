@@ -15,6 +15,8 @@ public class PlayerHead : MonoBehaviour {
 	}
 
 	private void Update() {
+		if (Time.timeScale == 0) return;
+
 		float bobAmount = Mathf.Abs(FakeControls.GetVertical()) + Mathf.Abs(FakeControls.GetHorizontal());
 		bobAmount = Mathf.Clamp01(bobAmount);
 
