@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779594458183282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.47134, y: 1.173, z: -30.924858}
+  m_LocalPosition: {x: -122.99043, y: -4.79, z: -37.229713}
   m_LocalScale: {x: 1.4, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4381887474887784}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 30
   minDistance: 5
-  damage: 7
+  damage: 10
   movementSpeed: 3.5
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultArmor: 200
-  currentHealth: 250
+  defaultArmor: 350
+  currentHealth: 300
 --- !u!114 &114760728394275228
 MonoBehaviour:
   m_ObjectHideFlags: 1

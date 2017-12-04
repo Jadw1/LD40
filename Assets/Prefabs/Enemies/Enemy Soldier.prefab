@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultArmor: 50
+  defaultArmor: 100
   currentHealth: 100
 --- !u!143 &143146924218069558
 CharacterController:

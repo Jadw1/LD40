@@ -32,6 +32,8 @@ public class EnemyStats : MonoBehaviour {
 			if (currentArmor < 0.0f) currentArmor = 0.0f;
 		}
 
+        if (dmg < 0)
+            dmg = 0;
 		currentHealth -= dmg;
 
 		if (currentHealth < 0.0f) currentHealth = 0.0f;

@@ -170,10 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 30
   minDistance: 5
-  damage: 10
+  damage: 15
   movementSpeed: 4
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
-  attackDelay: 1
+  attackDelay: 2
   muzzleFlash: {fileID: 212143736271719988}
   layerMask:
     serializedVersion: 2
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultArmor: 400
-  currentHealth: 500
+  defaultArmor: 700
+  currentHealth: 700
 --- !u!114 &114806060865336914
 MonoBehaviour:
   m_ObjectHideFlags: 1

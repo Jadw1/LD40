@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultArmor: 600
-  currentHealth: 600
+  defaultArmor: 1200
+  currentHealth: 1200
 --- !u!114 &114651928089514720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 50
   minDistance: 5
-  damage: 7
+  damage: 10
   movementSpeed: 4
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
