@@ -168,12 +168,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acda1e906d905b143b8336d2113df6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 20
+  detectionRange: 30
+  minDistance: 5
   damage: 10
   movementSpeed: 4
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
   muzzleFlash: {fileID: 212143736271719988}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 516
 --- !u!114 &114470763064899584
 MonoBehaviour:
   m_ObjectHideFlags: 1

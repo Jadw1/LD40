@@ -220,11 +220,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 50
+  minDistance: 5
   damage: 7
   movementSpeed: 4
   shootSound: {fileID: 8300000, guid: 1006785e322ed754196060ecfa3dd007, type: 3}
   attackDelay: 1
   muzzleFlash: {fileID: 212125137085335290}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 516
 --- !u!114 &114737754406347306
 MonoBehaviour:
   m_ObjectHideFlags: 1

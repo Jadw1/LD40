@@ -692,8 +692,9 @@ GameObject:
   - component: {fileID: 20924372269337158}
   - component: {fileID: 124235196393524970}
   - component: {fileID: 81227164956942752}
-  - component: {fileID: 114265772912318964}
   - component: {fileID: 114489226453053626}
+  - component: {fileID: 114553047896083068}
+  - component: {fileID: 82891100471247212}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -796,7 +797,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1763807895419724}
   m_LocalRotation: {x: -0, y: -0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: -74.54, y: -4.95, z: -11.98}
+  m_LocalPosition: {x: 5.4, y: 1.47, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888933881427346}
@@ -1067,6 +1068,86 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82891100471247212
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952169759655280}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1421,19 +1502,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &114265772912318964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1952169759655280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f22f6220f5503c4d841319d5850e121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bobbingSpeed: 0.2
-  bobbingHeight: 0.1
 --- !u!114 &114276393784864344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1836,6 +1904,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114553047896083068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952169759655280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab54e1ea35262ae43ad641210df1f54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  epicMusic: {fileID: 8300000, guid: 5e6adcc2347b1774891cbc0d36d3b7c1, type: 3}
+  normalMusic: {fileID: 8300000, guid: 386ceaa80a20aa643b6bc41dae5192b7, type: 3}
 --- !u!114 &114571310350421086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1851,6 +1932,7 @@ MonoBehaviour:
   drinkingSound: {fileID: 8300000, guid: 260d32955679acb4799bb04b0a557869, type: 3}
   eatingSound: {fileID: 8300000, guid: d49c274ca001af246b21952591b48fad, type: 3}
   ammoSound: {fileID: 8300000, guid: 516066dcae77b7b44b8d97c42b41ddb9, type: 3}
+  destroySound: {fileID: 8300000, guid: efd93f8e0e9a7ad458a3f43327908804, type: 3}
   generalSounds: {fileID: 82637053381395638}
   footsteps: {fileID: 82598511751144328}
   pauseMenu: {fileID: 114301144284469948}
@@ -2896,7 +2978,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401799046860660}
   m_LocalRotation: {x: -0, y: 0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 0, y: 0, z: -688.44867}
+  m_LocalPosition: {x: 0, y: 0, z: -693.65704}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 4725634317888650}
