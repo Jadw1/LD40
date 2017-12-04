@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour {
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation * rotationSpeed, 0.0f, 0.0f);
 
         Vector3 movement = new Vector3(FakeControls.GetHorizontal(), 0.0f, FakeControls.GetVertical());
-        controller.Move(transform.TransformDirection(movement) * Time.deltaTime * speed);
 
-        controller.Move(new Vector3(0.0f, -gravity * Time.deltaTime, 0.0f));
+		controller.Move(new Vector3(0.0f, -gravity * Time.deltaTime, 0.0f));
+		controller.Move(transform.TransformDirection(movement) * Time.deltaTime * speed);
 	}
 }

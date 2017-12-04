@@ -11,6 +11,7 @@ public class PlayerEffects : MonoBehaviour {
 	public AudioSource footsteps;
 
 	public GameObject deathScreen;
+	public GameObject winScreen;
 
 	private CharacterController character;
 	private HeadBobbing headBob;
@@ -38,7 +39,7 @@ public class PlayerEffects : MonoBehaviour {
 		}
 
 		// At one point I want to check the type of the ground and if the player is grounded.
-		if (character.velocity.magnitude > 1.0f && !footsteps.isPlaying) footsteps.Play();
+		if (character.velocity.magnitude >= 1.0f && !footsteps.isPlaying) footsteps.Play();
 		else if (character.velocity.magnitude < 1.0f && footsteps.isPlaying) footsteps.Stop();
 
 		// I update the randomness here.
@@ -51,7 +52,7 @@ public class PlayerEffects : MonoBehaviour {
 	}
 
 	public void win() {
-
+		winScreen.SetActive(true);
 	}
 
 	public void playDrinkingSound() {
