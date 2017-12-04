@@ -11,6 +11,6 @@ public class HealthIndicator : MonoBehaviour {
 	}
 
 	private void Update() {
-		image.fillAmount = PlayerStats.getHealthPercent();
+		image.fillAmount = PlayerStats.GetHealthPercent();
 	}
 }

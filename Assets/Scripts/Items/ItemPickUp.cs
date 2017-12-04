@@ -14,7 +14,8 @@ public class ItemPickUp : MonoBehaviour {
 		ARMOR,
 		DAMAGE,
 		DAMAGE_DIRECT,
-		AMMO
+		AMMO,
+		DOCUMENT
 	};
 
 	public float strength = 1.0f;
@@ -28,28 +29,28 @@ public class ItemPickUp : MonoBehaviour {
 		if (other != null && other.tag == "Player") {
 			switch (itemType) {
 				case Type.ALCOHOL:
-					PlayerStats.addAlcohol();
-					PlayerStats.addHealTime(strength);
+					PlayerStats.AddAlcohol();
+					PlayerStats.AddHealTime(strength);
 					Destroy(this.gameObject);
 					return;
 				case Type.ZAGRYZKA:
-					PlayerStats.removeAlcohol();
+					PlayerStats.RemoveAlcohol((int) strength);
 					Destroy(this.gameObject);
 					break;
 				case Type.HEAL:
-					PlayerStats.heal(strength);
+					PlayerStats.Heal(strength);
 					Destroy(this.gameObject);
 					break;
 				case Type.DAMAGE:
-					PlayerStats.dealDamage(strength);
+					PlayerStats.DealDamage(strength);
 					Destroy(this.gameObject);
 					break;
 				case Type.DAMAGE_DIRECT:
-					PlayerStats.dealDamage(strength, true);
+					PlayerStats.DealDamage(strength, true);
 					Destroy(this.gameObject);
 					break;
 				case Type.ARMOR:
-					PlayerStats.addArmor(strength);
+					PlayerStats.AddArmor(strength);
 					Destroy(this.gameObject);
 					break;
 				case Type.AMMO:
@@ -57,6 +58,10 @@ public class ItemPickUp : MonoBehaviour {
 						PlayerStats.AddAmmo((int) strength);
 						Destroy(this.gameObject);
 					}
+					break;
+				case Type.DOCUMENT:
+					PlayerStats.Win();
+					Destroy(this.gameObject);
 					break;
 
 				default: break;

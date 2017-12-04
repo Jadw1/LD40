@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour {
 	private const float maxArmor = 100.0f;
 
 	// Default constant values
+	private const int defaultMaxAlcohol = 10;
 	private const float defaultHealth = maxHealth;
 	private const float defaultArmor = 0.0f;
     private const float defaultDamage = 30.0f;
@@ -84,7 +85,7 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
-	public static void dealDamage(float damage, bool direct = false) {
+	public static void DealDamage(float damage, bool direct = false) {
 		float dmg = damage;
 
 		if (!direct) {
@@ -97,62 +98,72 @@ public class PlayerStats : MonoBehaviour {
 
 		currentHealth -= dmg;
 
-		Debug.Log("Damage done: " + dmg.ToString() + " HP: " + currentHealth.ToString());
-
         stats.blooding.BloodScreen(dmg);
 
-		if (currentHealth < 0.0f) currentHealth = 0.0f;
+		if (currentHealth <= 0.0f) {
+			currentHealth = 0.0f;
+			player.lose();
+		}
 	}
 
-	public static void addHealTime(float time) {
+	public static void AddHealTime(float time) {
 		currentHealTime += time;
 	}
 
-	public static void removeHealTime(float time) {
+	public static void RemoveHealTime(float time) {
 		currentHealTime -= time;
 		if (currentHealTime < 0.0f) currentHealTime = 0.0f;
 	}
 
-	public static void heal(float amount) {
+	public static void Heal(float amount) {
 		currentHealth += amount;
 		if (currentHealth > maxHealth) currentHealth = maxHealth;
 	}
 
-	public static void addArmor(float amount) {
+	public static void AddArmor(float amount) {
 		currentArmor += amount;
 
 		if (currentArmor > maxArmor) currentArmor = maxArmor;
 	}
 
-	public static void decreaseArmor(float amount) {
+	public static void DecreaseArmor(float amount) {
 		currentArmor -= amount;
 
 		if (currentArmor < 0.0f) currentArmor = 0.0f;
 	}
 
-	public static void addAlcohol() {
+	public static void AddAlcohol() {
 		currentAlcohol++;
 
-		if (currentAlcohol > getAlcoholLimit()) currentAlcohol = getAlcoholLimit();
+		if (currentAlcohol > GetAlcoholLimit()) currentAlcohol = GetAlcoholLimit();
 
 		if (player != null) player.playDrinkingSound();
 	}
 
-	public static int getAlcoholLimit() { return 5; }
+	public static int GetAlcoholLimit() { return defaultMaxAlcohol; }
 
-	public static void removeAlcohol() {
-		currentAlcohol = 0;
+	public static void RemoveAlcohol(int amt) {
+		currentAlcohol -= amt;
+		if (currentAlcohol < 0) currentAlcohol = 0;
 	}
 
-	public static void reset() {
+	public static void ResetToDefault() {
 		currentArmor = defaultArmor;
 		currentHealth = defaultHealth;
 		currentAlcohol = defaultAlcohol;
 	}
 
-	public static float getHealthPercent() { return (currentHealth / maxHealth); }
+	public static void Lose() {
+		player.lose();
+	}
 
-	public static GameObject getPlayer() {
+	public static void Win() {
+		player.win();
+	}
+
+	public static float GetHealthPercent() { return (currentHealth / maxHealth); }
+
+	public static GameObject GetPlayer() {
 		return stats.gameObject;
 	}
 
@@ -160,6 +171,6 @@ public class PlayerStats : MonoBehaviour {
 		player = GetComponent<PlayerEffects>();
 		stats = this;
 
-		reset();
+		ResetToDefault();
 	}
 }
