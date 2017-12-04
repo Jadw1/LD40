@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour {
 
 	private void Update() {
 
-		Transform player = PlayerStats.getPlayer().transform;
+		Transform player = PlayerStats.GetPlayer().transform;
 
 		Vector3 direction = player.position - transform.position;
 
@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour {
 
 					if (hit.collider.tag == "Player") {
 						audio.PlayOneShot(shootSound);
-						PlayerStats.dealDamage(damage);
+						PlayerStats.DealDamage(damage);
 					}
 				}
 
