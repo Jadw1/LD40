@@ -17,9 +17,15 @@ public class Melee : MonoBehaviour {
 
     public bool canShoot = true;   //Zmien to na true na koniec animacji
 
-    private void FixedUpdate() {
+	private MeleeAnim anim;
+
+	private void Start() {
+		anim = GetComponent<MeleeAnim>();
+	}
+
+	private void FixedUpdate() {
         if(Input.GetButtonDown("Fire2") && Time.time >= timeToAttack) {
-            //Tutaj zacznij animacje
+			anim.StartAnim();
 
             canShoot = false;
             timeToAttack = Time.time + 1 / rate;
