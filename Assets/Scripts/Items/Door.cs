@@ -12,6 +12,10 @@ public class Door : MonoBehaviour {
     public DoorOpeningDirection direction;
 
 	public List<GameObject> keys;
+    public List<SpriteRenderer> diodes;
+    public Color positiveColor;
+    public Color negativeColor;
+
 	public AudioClip doorLockedSound;
 
     public float speed = 5.0f;
@@ -55,7 +59,24 @@ public class Door : MonoBehaviour {
 		audio = GetComponent<AudioSource>();
     }
 
+    private void CheckKeys() {
+        for(int i=0; i<diodes.Count; i++) {
+        if (diodes[i] == null)
+            continue;
+
+        if(keys[i] != null) {
+            diodes[i].color = negativeColor;
+        }
+        else {
+            diodes[i].color = positiveColor;
+        }
+        }
+
+    }
+
     void Update () {
+        if(!IsKeysEmpty())  CheckKeys();
+
 		if(isOpening) {
             diff += offset * speed * Time.deltaTime;
             if (diff > offset) {
