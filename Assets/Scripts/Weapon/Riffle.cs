@@ -133,7 +133,7 @@ public class Riffle : MonoBehaviour {
     }
          
     private void Update() {
-        if(Input.GetButtonDown("Reload") && PlayerStats.IsReloadingPossible()) {
+        if(Input.GetButtonDown("Reload") && PlayerStats.IsReloadingPossible() && !isReloading) {
             Reload();
         }
     }
