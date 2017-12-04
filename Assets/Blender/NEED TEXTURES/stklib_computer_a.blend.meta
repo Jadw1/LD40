@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 7a6d93a9a57efa847aecef099e349fad
+timeCreated: 1512407765
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: stklib_computer_a_fan
+    100004: stklib_computer_a_LED
+    100006: stklib_computer_a_main
+    400000: //RootNode
+    400002: stklib_computer_a_fan
+    400004: stklib_computer_a_LED
+    400006: stklib_computer_a_main
+    2300000: stklib_computer_a_fan
+    2300002: stklib_computer_a_LED
+    2300004: stklib_computer_a_main
+    3300000: stklib_computer_a_fan
+    3300002: stklib_computer_a_LED
+    3300004: stklib_computer_a_main
+    4300000: stklib_computer_a_fan
+    4300002: stklib_computer_a_LED
+    4300004: stklib_computer_a_main
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__gfxGlow_blue_a_png
+    second: {fileID: 2100000, guid: 911ce3aab5638d94392d9723e2e93e7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__gfxGlow_green_a_png
+    second: {fileID: 2100000, guid: ba3d4a6c748095b4f83ee5505390dd86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_blueTurbine_a_png
+    second: {fileID: 2100000, guid: 6261bb43c5fe409479969eff8f1654ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_computerConnexion_a_png
+    second: {fileID: 2100000, guid: 9623002e1535aaa448be134abcef6693, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_generic_gridA_png
+    second: {fileID: 2100000, guid: ebb76821f2557d94c87d839128512047, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_greyMetal_a_png
+    second: {fileID: 2100000, guid: b72d3e443d897334f90a0d9e9909c910, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_lightGrayMetal_a_png
+    second: {fileID: 2100000, guid: 9bcbdedd91148354b95621bbbc6ba5a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_metalRustedBlue_a_png
+    second: {fileID: 2100000, guid: a50d4c807b81d6146ab6ddfaae2d4693, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__stk_warningPanel_a_png
+    second: {fileID: 2100000, guid: 7faf86c6a01dccc4696664980b89da30, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
