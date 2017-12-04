@@ -9,8 +9,12 @@ public class PlayerMovement : MonoBehaviour {
     public float rotationSpeed = 2.0f;
     public float verticalRotationLimit = 45.0f;
 
+    public float gravity = 0.1f;
+
     private CharacterController controller;
     private float verticalRotation = 0.0f;
+
+    private float verticalVelocity = 0.0f;
 
 	void Awake () {
         controller = GetComponent<CharacterController>();
@@ -28,5 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector3 movement = new Vector3(FakeControls.GetHorizontal(), 0.0f, FakeControls.GetVertical());
         controller.Move(transform.TransformDirection(movement) * Time.deltaTime * speed);
+
+        controller.Move(new Vector3(0.0f, -gravity * Time.deltaTime, 0.0f));
 	}
 }
