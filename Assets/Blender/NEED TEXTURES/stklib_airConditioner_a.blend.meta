@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6295835255607cc40a88faab1ab2321b
-timeCreated: 1512407822
+timeCreated: 1512410413
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -24,50 +24,50 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_futureBox_a_png
-    second: {fileID: 2100000, guid: c4fcff71ae40b1542ad0b9afd5285349, type: 2}
+    second: {fileID: 2100000, guid: 8f4c4315bd4014044b2aeb6479154cc9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_generic_gridA_png
-    second: {fileID: 2100000, guid: ebb76821f2557d94c87d839128512047, type: 2}
+    second: {fileID: 2100000, guid: 8b6db1e3099430c46b50864cec3e5831, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_greyMetal_a_png
-    second: {fileID: 2100000, guid: b72d3e443d897334f90a0d9e9909c910, type: 2}
+    second: {fileID: 2100000, guid: f81b89ce6e25e9b4bad2d0f6ae2bcafd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_metalDoor_a_png
-    second: {fileID: 2100000, guid: 554478199fb84ea448988b01a2b496bf, type: 2}
+    second: {fileID: 2100000, guid: f9486a550fca38c4281b1cf40d29474a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_pipe_a_png
-    second: {fileID: 2100000, guid: 4da69501e9145144597a228283af5494, type: 2}
+    second: {fileID: 2100000, guid: b583aa68e7b23e74eaedfc639b52e270, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stktex_generic_concreteA_png
-    second: {fileID: 2100000, guid: 8826e3af9fa92c9468010e2f2f97e4a2, type: 2}
+    second: {fileID: 2100000, guid: baf09fae71cb4f54f9d702af287afe80, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stktex_rope_a_png
-    second: {fileID: 2100000, guid: f5ff6a539f4bd3246a2c2237a2dec349, type: 2}
+    second: {fileID: 2100000, guid: 448e5d4aa71058b42abff5ac3926f2f3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: None__stk_greyMetal_a_png
-    second: {fileID: 2100000, guid: b72d3e443d897334f90a0d9e9909c910, type: 2}
+    second: {fileID: 2100000, guid: f5c7c39a513dd7b47aa3fcc88c2608f5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: None__stk_metalRustedBlue_a_png
-    second: {fileID: 2100000, guid: a50d4c807b81d6146ab6ddfaae2d4693, type: 2}
+    second: {fileID: 2100000, guid: b6ac36c189097c04796d3dd7c0342b83, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 0
   animations:
@@ -97,10 +97,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -117,7 +117,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -133,10 +133,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

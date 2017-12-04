@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7a6d93a9a57efa847aecef099e349fad
-timeCreated: 1512407765
+timeCreated: 1512410418
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -29,50 +29,50 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__gfxGlow_blue_a_png
-    second: {fileID: 2100000, guid: 911ce3aab5638d94392d9723e2e93e7a, type: 2}
+    second: {fileID: 2100000, guid: 5325405cd7faa314db91a217f19bf298, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__gfxGlow_green_a_png
-    second: {fileID: 2100000, guid: ba3d4a6c748095b4f83ee5505390dd86, type: 2}
+    second: {fileID: 2100000, guid: d1f7c84fa8acfb348a186664a0cedca2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_blueTurbine_a_png
-    second: {fileID: 2100000, guid: 6261bb43c5fe409479969eff8f1654ad, type: 2}
+    second: {fileID: 2100000, guid: 8e3c5a04e5d3a1b4e9262c3a9311a5b5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_computerConnexion_a_png
-    second: {fileID: 2100000, guid: 9623002e1535aaa448be134abcef6693, type: 2}
+    second: {fileID: 2100000, guid: cde2e3f62cbe2d047acb7626229d92cd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_generic_gridA_png
-    second: {fileID: 2100000, guid: ebb76821f2557d94c87d839128512047, type: 2}
+    second: {fileID: 2100000, guid: 8b6db1e3099430c46b50864cec3e5831, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_greyMetal_a_png
-    second: {fileID: 2100000, guid: b72d3e443d897334f90a0d9e9909c910, type: 2}
+    second: {fileID: 2100000, guid: f81b89ce6e25e9b4bad2d0f6ae2bcafd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_lightGrayMetal_a_png
-    second: {fileID: 2100000, guid: 9bcbdedd91148354b95621bbbc6ba5a1, type: 2}
+    second: {fileID: 2100000, guid: 85636238a930ff448938cb3f1f2bde9f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_metalRustedBlue_a_png
-    second: {fileID: 2100000, guid: a50d4c807b81d6146ab6ddfaae2d4693, type: 2}
+    second: {fileID: 2100000, guid: 6643c1fc07be85a4cbae5c8ee7e67dc3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material__stk_warningPanel_a_png
-    second: {fileID: 2100000, guid: 7faf86c6a01dccc4696664980b89da30, type: 2}
+    second: {fileID: 2100000, guid: 0ac839a4c369bd4429992334999560db, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 0
   animations:
