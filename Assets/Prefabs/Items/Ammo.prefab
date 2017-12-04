@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52bb87ecf6b52ae4d92135aebe2b7fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 30
+  strength: 20
   bobSpeed: 4
   bobRange: 0.1
   itemType: 6
