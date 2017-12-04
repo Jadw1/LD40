@@ -70,7 +70,8 @@ public class PlayerStats : MonoBehaviour {
 
     public static void AddAmmo(int amount) {
         currentAmmo = Mathf.Clamp(currentAmmo + amount, 0, defaultMaxAmmo);
-    }
+		player.PlayAmmoSound();
+	}
 
     public static void Reload() {
         if(currentAmmo >= defaultMaxClip) {
@@ -102,7 +103,7 @@ public class PlayerStats : MonoBehaviour {
 
 		if (currentHealth <= 0.0f) {
 			currentHealth = 0.0f;
-			player.lose();
+			player.Lose();
 		}
 	}
 
@@ -137,7 +138,7 @@ public class PlayerStats : MonoBehaviour {
 
 		if (currentAlcohol > GetAlcoholLimit()) currentAlcohol = GetAlcoholLimit();
 
-		if (player != null) player.playDrinkingSound();
+		if (player != null) player.PlayDrinkingSound();
 	}
 
 	public static int GetAlcoholLimit() { return defaultMaxAlcohol; }
@@ -145,6 +146,7 @@ public class PlayerStats : MonoBehaviour {
 	public static void RemoveAlcohol(int amt) {
 		currentAlcohol -= amt;
 		if (currentAlcohol < 0) currentAlcohol = 0;
+		player.PlayEatingSound();
 	}
 
 	public static void ResetToDefault() {
@@ -157,11 +159,11 @@ public class PlayerStats : MonoBehaviour {
 	}
 
 	public static void Lose() {
-		player.lose();
+		player.Lose();
 	}
 
 	public static void Win() {
-		player.win();
+		player.Win();
 	}
 
 	public static float GetHealthPercent() { return (currentHealth / maxHealth); }

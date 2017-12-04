@@ -796,7 +796,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1763807895419724}
   m_LocalRotation: {x: -0, y: -0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 8.14, y: 1.12, z: -0.19}
+  m_LocalPosition: {x: -74.54, y: -4.95, z: -11.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888933881427346}
@@ -1849,6 +1849,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponCamera: {fileID: 114938890650362956}
   drinkingSound: {fileID: 8300000, guid: 260d32955679acb4799bb04b0a557869, type: 3}
+  eatingSound: {fileID: 8300000, guid: d49c274ca001af246b21952591b48fad, type: 3}
+  ammoSound: {fileID: 8300000, guid: 516066dcae77b7b44b8d97c42b41ddb9, type: 3}
   generalSounds: {fileID: 82637053381395638}
   footsteps: {fileID: 82598511751144328}
   pauseMenu: {fileID: 114301144284469948}
@@ -2894,7 +2896,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401799046860660}
   m_LocalRotation: {x: -0, y: 0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 0, y: 0, z: -699.4368}
+  m_LocalPosition: {x: 0, y: 0, z: -688.44867}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 4725634317888650}

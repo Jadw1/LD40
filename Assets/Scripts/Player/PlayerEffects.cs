@@ -7,6 +7,9 @@ public class PlayerEffects : MonoBehaviour {
 	public Pixelation weaponCamera;
 
 	public AudioClip drinkingSound;
+	public AudioClip eatingSound;
+	public AudioClip ammoSound;
+
 	public AudioSource generalSounds;
 	public AudioSource footsteps;
 
@@ -53,20 +56,28 @@ public class PlayerEffects : MonoBehaviour {
 		FakeControls.SetRandomness(alcohol / PlayerStats.GetAlcoholLimit() * 0.5f);
 	}
 
-	public void lose() {
+	public void Lose() {
 		deathScreen.SetActive(true);
 		pauseMenu.setCanUnpause(false);
 		Time.timeScale = 0;
 		
 	}
 
-	public void win() {
+	public void Win() {
 		winScreen.SetActive(true);
 		pauseMenu.setCanUnpause(false);
 		Time.timeScale = 0;
 	}
 
-	public void playDrinkingSound() {
+	public void PlayDrinkingSound() {
 		generalSounds.PlayOneShot(drinkingSound);
+	}
+
+	public void PlayAmmoSound() {
+		generalSounds.PlayOneShot(ammoSound);
+	}
+
+	public void PlayEatingSound() {
+		generalSounds.PlayOneShot(eatingSound);
 	}
 }
