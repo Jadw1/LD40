@@ -10,30 +10,90 @@ ModelImporter:
     100004: Suzanne
     100006: Suzanne_001
     100008: Plane_001
+    100010: Plane_002
+    100012: Plane_003
+    100014: Plane_004
+    100016: Plane_005
+    100018: Plane_006
+    100020: Plane_007
+    100022: Plane_008
+    100024: Plane_009
+    100026: Plane_010
+    100028: Plane_011
     400000: //RootNode
     400002: Plane
     400004: Suzanne
     400006: Suzanne_001
     400008: Plane_001
+    400010: Plane_002
+    400012: Plane_003
+    400014: Plane_004
+    400016: Plane_005
+    400018: Plane_006
+    400020: Plane_007
+    400022: Plane_008
+    400024: Plane_009
+    400026: Plane_010
+    400028: Plane_011
     2300000: //RootNode
     2300002: Plane
     2300004: Suzanne
     2300006: Suzanne_001
     2300008: Plane_001
+    2300010: Plane_002
+    2300012: Plane_003
+    2300014: Plane_004
+    2300016: Plane_005
+    2300018: Plane_006
+    2300020: Plane_007
+    2300022: Plane_008
+    2300024: Plane_009
+    2300026: Plane_010
+    2300028: Plane_011
     3300000: //RootNode
     3300002: Plane
     3300004: Suzanne
     3300006: Suzanne_001
     3300008: Plane_001
+    3300010: Plane_002
+    3300012: Plane_003
+    3300014: Plane_004
+    3300016: Plane_005
+    3300018: Plane_006
+    3300020: Plane_007
+    3300022: Plane_008
+    3300024: Plane_009
+    3300026: Plane_010
+    3300028: Plane_011
     4300000: Plane
     4300002: Suzanne_001
     4300004: Suzanne
     4300006: Plane_001
+    4300008: Plane_010
+    4300010: Plane_009
+    4300012: Plane_008
+    4300014: Plane_007
+    4300016: Plane_006
+    4300018: Plane_005
+    4300020: Plane_004
+    4300022: Plane_003
+    4300024: Plane_002
+    4300026: Plane_011
     6400000: //RootNode
     6400002: Plane
     6400004: Suzanne
     6400006: Suzanne_001
     6400008: Plane_001
+    6400010: Plane_002
+    6400012: Plane_003
+    6400014: Plane_004
+    6400016: Plane_005
+    6400018: Plane_006
+    6400020: Plane_007
+    6400022: Plane_008
+    6400024: Plane_009
+    6400026: Plane_010
+    6400028: Plane_011
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
