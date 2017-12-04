@@ -57,7 +57,7 @@ public class Riffle : MonoBehaviour {
 			return;
 		}
 
-        if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0 && melee.canShoot) {
+        if(Input.GetButton("Fire1") && Time.time >= timeToFire && PlayerStats.clip > 0 && melee.CanShoot()) {
             if (fullAmmo)
                 fullAmmoCount++;
             fullAmmo = true;

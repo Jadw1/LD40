@@ -15,8 +15,6 @@ public class Melee : MonoBehaviour {
     public GameObject enemyBlood;
     public Riffle riffle;
 
-    public bool canShoot = true;   //Zmien to na true na koniec animacji
-
 	private MeleeAnim anim;
 
 	private void Start() {
@@ -24,13 +22,15 @@ public class Melee : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-        if(Input.GetButtonDown("Fire2") && Time.time >= timeToAttack) {
+        if(Input.GetButtonDown("Fire2") && anim.CanSwing()) {
 			anim.StartAnim();
-
-            canShoot = false;
             timeToAttack = Time.time + 1 / rate;
         }
     }
+
+	public bool CanShoot() {
+		return anim.CanSwing();
+	}
 
     //To wywołaj jak będzie srodkowa klatka
     public void MeleeAttack() {
