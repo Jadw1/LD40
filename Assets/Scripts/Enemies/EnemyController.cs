@@ -64,6 +64,7 @@ public class EnemyController : MonoBehaviour {
 						audio.PlayOneShot(shootSound);
 						PlayerStats.DealDamage(damage);
 					} else if (hit.collider.tag == "Destroyable") {
+						audio.PlayOneShot(shootSound);
 						EnemyStats crateStats = hit.collider.GetComponent<EnemyStats>();
 
 						if (crateStats != null) {

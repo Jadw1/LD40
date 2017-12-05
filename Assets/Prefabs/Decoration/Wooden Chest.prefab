@@ -126,7 +126,7 @@ MonoBehaviour:
   - {fileID: 1405324354896824, guid: 7a0a9bc840d4dc148b1d176a16c27c35, type: 2}
   - {fileID: 1973239108327888, guid: 3be79d3bb0d473648a57d86b80a85e0e, type: 2}
   - {fileID: 0}
-  weights: 020000000300000001000000
+  weights: 020000000200000001000000
 --- !u!114 &114818843347090418
 MonoBehaviour:
   m_ObjectHideFlags: 1
