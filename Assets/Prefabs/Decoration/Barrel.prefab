@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultArmor: 0
-  currentHealth: 100
+  currentHealth: 30
 --- !u!114 &114720084295475782
 MonoBehaviour:
   m_ObjectHideFlags: 1

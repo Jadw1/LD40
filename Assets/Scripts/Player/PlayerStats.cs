@@ -2,13 +2,13 @@
 
 public class PlayerStats : MonoBehaviour {
 	// Max values
-	private const float maxHealth = 100.0f;
-	private const float maxArmor = 100.0f;
+	private const float maxHealth = 200.0f;
+	private const float maxArmor = 150.0f;
 
 	// Default constant values
 	private const int defaultMaxAlcohol = 10;
 	private const float defaultHealth = maxHealth;
-	private const float defaultArmor = 0.0f;
+	private const float defaultArmor = maxArmor;
     private const float defaultDamage = 30.0f;
 	private const float defaultHealTime = 0.0f;
     private const int defaultMaxAmmo = 150;
