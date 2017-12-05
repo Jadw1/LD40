@@ -4667,7 +4667,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401799046860660}
   m_LocalRotation: {x: -0, y: 0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 0, y: 0, z: -558.9025}
+  m_LocalPosition: {x: 0, y: 0, z: -558.46564}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 4725634317888650}
@@ -5118,17 +5118,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355615744793786}
   m_LocalRotation: {x: -0, y: -0.000000029802315, z: -0, w: 1}
-  m_LocalPosition: {x: -907.0002, y: 442.6, z: 0}
+  m_LocalPosition: {x: 169.00012, y: -84.399994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224087199040402672}
   m_Father: {fileID: 224402232328589046}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -957, y: 492.6}
-  m_SizeDelta: {x: 235.1, y: 156.2}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 219, y: -134.4}
+  m_SizeDelta: {x: 235.09998, y: 156.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224632156538841598
 RectTransform:
@@ -5289,17 +5289,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924964999184428}
   m_LocalRotation: {x: -0, y: -0.000000029802315, z: -0, w: 1}
-  m_LocalPosition: {x: -1055.0001, y: 150.9, z: -0}
+  m_LocalPosition: {x: 21.000122, y: 150.9, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224942357570270320}
   m_Father: {fileID: 224402232328589046}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1105, y: 200.9}
-  m_SizeDelta: {x: 115.1, y: 31.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 71, y: 200.9}
+  m_SizeDelta: {x: 115.099976, y: 31.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224751024995760038
 RectTransform:
