@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour {
 	public Slider gameVolume;
 	public Slider musicVolume;
 
-	private bool isPaused = false;
+	public bool isPaused = false;
 	private bool canUnpause = true;
 
 	private void Update() {
@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour {
 		if (!pauseMenu.activeInHierarchy) {
 			pauseMenu.SetActive(true);
 			Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 			Time.timeScale = 0;
 			isPaused = true;
 		}
@@ -36,7 +37,8 @@ public class PauseMenu : MonoBehaviour {
 		if (pauseMenu.activeInHierarchy) {
 			pauseMenu.SetActive(false);
 			Cursor.lockState = CursorLockMode.Locked;
-			Time.timeScale = 1;
+            Cursor.visible = false;
+            Time.timeScale = 1;
 			isPaused = false;
 		}
 	}
