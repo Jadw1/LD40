@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour {
 
 		audio = GetComponent<AudioSource>();
 
-		audio.clip = epicMusic;
+		audio.clip = normalMusic;
 		audio.Play();
 	}
 

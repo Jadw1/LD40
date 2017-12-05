@@ -11,7 +11,7 @@ public class Door : MonoBehaviour {
 
     public DoorOpeningDirection direction;
 
-	public GameObject[] keys;
+	public List<GameObject> keys;
     public SpriteRenderer[] diodes;
     public Color positiveColor;
     public Color negativeColor;
@@ -30,6 +30,14 @@ public class Door : MonoBehaviour {
     private bool isClosing = false;
 
 	private AudioSource audio;
+
+    public void AddKey(GameObject key) {
+        keys.Add(key);
+    }
+
+    public void RemoveAllKeys() {
+        keys = new List<GameObject>();
+    }
 
     private bool IsKeysEmpty() {
         foreach(GameObject key in keys) {
@@ -64,7 +72,7 @@ public class Door : MonoBehaviour {
         for (int i = 0; i < diodes.Length; i++) {
 			bool lit = true;
 
-			if (i < keys.Length && keys[i] != null) lit = false;
+			if (i < keys.Count && keys[i] != null) lit = false;
 
 			diodes[i].color = lit ? positiveColor : negativeColor;
 		}

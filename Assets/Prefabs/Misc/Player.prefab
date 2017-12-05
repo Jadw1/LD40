@@ -1146,7 +1146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1763807895419724}
   m_LocalRotation: {x: -0, y: -0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 6.17, y: 1.28, z: 1.48}
+  m_LocalPosition: {x: 6.53, y: 1.19, z: -3.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4888933881427346}
@@ -1954,7 +1954,8 @@ MonoBehaviour:
   - {fileID: 21300002, guid: b1236753d7d56cb4582574262ca8e1b3, type: 3}
   - {fileID: 21300004, guid: b1236753d7d56cb4582574262ca8e1b3, type: 3}
   - {fileID: 21300002, guid: b1236753d7d56cb4582574262ca8e1b3, type: 3}
-  animSpeed: 0.05
+  animSpeed: 0.2
+  swingSpeed: 0.1
   middleFrame: 2
 --- !u!114 &114248007322695628
 MonoBehaviour:
@@ -2131,7 +2132,6 @@ MonoBehaviour:
     m_Bits: 516
   enemyBlood: {fileID: 1311250952839424, guid: 0354e4262c8e79c469f68bd5534fb345, type: 2}
   riffle: {fileID: 114677753260029496}
-  canShoot: 1
 --- !u!114 &114328983091361774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4057,7 +4057,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401799046860660}
   m_LocalRotation: {x: -0, y: 0.69974035, z: -0, w: 0.7143973}
-  m_LocalPosition: {x: 0, y: 0, z: -623.9644}
+  m_LocalPosition: {x: 0, y: 0, z: -594.5677}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 4725634317888650}

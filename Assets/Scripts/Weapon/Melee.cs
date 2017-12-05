@@ -39,6 +39,7 @@ public class Melee : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit, range, ~ignore)) {
             if (hit.collider.tag == "Enemy") {
+                Debug.Log("Melee");
                 EnemyStats enemy = hit.collider.GetComponent<EnemyStats>();
                 if (enemy != null) {
                     enemy.dealDamage(PlayerStats.damage);
@@ -51,6 +52,7 @@ public class Melee : MonoBehaviour {
                 }
             }
             else if (hit.collider.tag == "Destroyable") {
+                Debug.Log("Melee");
                 EnemyStats destroyable = hit.collider.GetComponent<EnemyStats>();
                 if (destroyable != null) {
                     destroyable.dealDamage(PlayerStats.damage);
