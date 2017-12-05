@@ -1874,6 +1874,65 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &146751474
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 284890908}
+    m_Modifications:
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 66.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_RootOrder
+      value: 301
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118096402876340, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_Name
+      value: Barrel (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0000005
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &146751475 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c,
+    type: 2}
+  m_PrefabInternal: {fileID: 146751474}
 --- !u!1001 &150098731
 Prefab:
   m_ObjectHideFlags: 0
@@ -4706,6 +4765,7 @@ Transform:
   - {fileID: 319851866}
   - {fileID: 2005342507}
   - {fileID: 1839436213}
+  - {fileID: 146751475}
   m_Father: {fileID: 1818110389}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13196,7 +13256,7 @@ Prefab:
     - target: {fileID: 224128763978363814, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 17.250648
+      value: 17.568737
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5a035418ae5fe4a8f25027cb7f6fb8, type: 2}
@@ -17885,7 +17945,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 66.31
+      value: 65.07
       objectReference: {fileID: 0}
     - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -17893,7 +17953,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.17
+      value: -15.48
       objectReference: {fileID: 0}
     - target: {fileID: 4223015966337366, guid: 5ea75d2b6320f8743b66f4f6e03a318c, type: 2}
       propertyPath: m_LocalRotation.x
