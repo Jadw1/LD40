@@ -31,6 +31,13 @@ public class Door : MonoBehaviour {
 
 	private AudioSource audio;
 
+    private void OnTriggerEnter(Collider other) {
+        if(isClosing && other.tag == "Player") {
+            isClosing = false;
+            Open();
+        }
+    }
+
     public void AddKey(GameObject key) {
         keys.Add(key);
     }
