@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e4ec20bd9c7cb46a8b2ba582f2a1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultArmor: 350
-  currentHealth: 300
+  defaultArmor: 200
+  currentHealth: 250
 --- !u!114 &114760728394275228
 MonoBehaviour:
   m_ObjectHideFlags: 1
