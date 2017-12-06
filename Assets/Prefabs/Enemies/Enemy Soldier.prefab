@@ -188,7 +188,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 212012496596495430}
   layerMask:
     serializedVersion: 2
-    m_Bits: 516
+    m_Bits: 8708
 --- !u!114 &114601506513142158
 MonoBehaviour:
   m_ObjectHideFlags: 1

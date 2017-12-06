@@ -11914,7 +11914,7 @@ GameObject:
   - component: {fileID: 755506286}
   - component: {fileID: 755506285}
   - component: {fileID: 755506284}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AntyIdiotManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13256,7 +13256,17 @@ Prefab:
     - target: {fileID: 224128763978363814, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 17.568737
+      value: 17.74873
+      objectReference: {fileID: 0}
+    - target: {fileID: 114677753260029496, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
+        type: 2}
+      propertyPath: ignore.m_Bits
+      value: 8708
+      objectReference: {fileID: 0}
+    - target: {fileID: 114308078869421098, guid: fb5a035418ae5fe4a8f25027cb7f6fb8,
+        type: 2}
+      propertyPath: ignore.m_Bits
+      value: 8708
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5a035418ae5fe4a8f25027cb7f6fb8, type: 2}
@@ -13662,6 +13672,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.z
       value: 3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646540524852020, guid: b544958850e09784596704f65ff3fd4f, type: 2}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544958850e09784596704f65ff3fd4f, type: 2}
@@ -18796,6 +18810,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646540524852020, guid: b544958850e09784596704f65ff3fd4f, type: 2}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544958850e09784596704f65ff3fd4f, type: 2}
@@ -26523,7 +26541,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4776231713422684, guid: b544958850e09784596704f65ff3fd4f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -45.379
+      value: -45.55
       objectReference: {fileID: 0}
     - target: {fileID: 4776231713422684, guid: b544958850e09784596704f65ff3fd4f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -26531,7 +26549,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4776231713422684, guid: b544958850e09784596704f65ff3fd4f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.04
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4776231713422684, guid: b544958850e09784596704f65ff3fd4f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -26567,6 +26585,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.z
       value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646540524852020, guid: b544958850e09784596704f65ff3fd4f, type: 2}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544958850e09784596704f65ff3fd4f, type: 2}
@@ -27769,7 +27791,7 @@ GameObject:
   - component: {fileID: 1840480174}
   - component: {fileID: 1840480173}
   - component: {fileID: 1840480172}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BossManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
