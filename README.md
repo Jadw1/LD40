@@ -1,7 +1,9 @@
 # LD40
 Game made for Ludum Dare 40
-https://ldjam.com/events/ludum-dare/40/drunken-soviet
-https://neferius.itch.io/drunken-soviet
+
+Link to game on LD: https://ldjam.com/events/ludum-dare/40/drunken-soviet
+
+Link to game on itch.io: https://neferius.itch.io/drunken-soviet
 
 The more you drink the worse you'll feel. But that's the only way to get back health. Shoot enemies, drink vodka to regain health and eat cucumbers to make the effects of alcohol weaker. 
 
